@@ -1,0 +1,27 @@
+<ehcache>
+	<diskStore path="java.io.tmpdir"/>
+
+	<cache name="arya.sys.roles"
+		   maxBytesLocalHeap="5M"
+		   eternal="false"
+		   timeToIdleSeconds="300"
+		   overflowToDisk="true"
+		   maxElementsOnDisk="500"
+		   memoryStoreEvictionPolicy="LRU"/>
+
+	<cache name="bran.corp.perms"
+		   maxBytesLocalHeap="5M"
+		   eternal="false"
+		   timeToIdleSeconds="300"
+		   overflowToDisk="true"
+		   maxElementsOnDisk="500"
+		   memoryStoreEvictionPolicy="LRU"/>
+
+	<cache name="arya.sys.configs"
+		   maxBytesLocalHeap="5M"
+		   eternal="false"
+		   timeToIdleSeconds="300"
+		   overflowToDisk="true"
+		   maxElementsOnDisk="500"
+		   memoryStoreEvictionPolicy="LRU"/>
+</ehcache>

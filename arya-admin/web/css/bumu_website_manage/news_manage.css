@@ -1,0 +1,5 @@
+.website_news_manage_container .content .table_container table tbody .operate .btn:not(:last-child) { margin-right: 8px; }
+
+.news_info_modal .modal-body .row { margin-bottom: 10px; }
+.news_info_modal .modal-body .row .txt { line-height: 34px; padding: 0; }
+.news_info_modal .modal-body .row .pub_time input { max-width: inherit; }

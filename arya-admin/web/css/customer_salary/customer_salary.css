@@ -1,0 +1,16 @@
+.customer_salary_container .content .table_container table td.operate .btn:not(:first-child) {
+    margin-left: 8px;
+}
+
+.customer_salary_container .content .table_container table .remark div {
+    width: 120px;
+    padding: 0 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.customer_remark_modal .modal-body .row:first-child {
+    margin-bottom: 25px;
+}
+

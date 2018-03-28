@@ -1,0 +1,11 @@
+.user_info_container .user_info .tab-content > div { position: relative; }
+.user_info_container .user_info .tab-content > div .row { margin: 0; line-height: 40px; border-style: solid; border-width: 1px; border-color: rgba(0, 0, 0, 0.1); border-top: none; }
+.user_info_container .user_info .tab-content #entry_info .entry_info_block { float: left; width: 100%; padding-left: 10px; }
+.user_info_container .user_info .tab-content #entry_info .entry_info_block:not(:last-child) { margin-bottom: 15px; }
+.user_info_container .user_info .tab-content #entry_info .entry_info_block .entry_info_tl { font-size: 18px; font-weight: bold; line-height: 40px; }
+.user_info_container .user_info .tab-content #entry_info .entry_info_block .entry_info_content .app_entry_item { line-height: 30px; padding: 0; }
+.user_info_container .user_info .tab-content #wallet_info .wallet_info_block { float: left; width: 100%; padding-left: 10px; }
+.user_info_container .user_info .tab-content #wallet_info .wallet_info_block:not(:last-child) { margin-bottom: 15px; }
+.user_info_container .user_info .tab-content #wallet_info .wallet_info_block .wallet_info_tl { font-size: 18px; font-weight: bold; line-height: 40px; }
+.user_info_container .user_info .tab-content #wallet_info .wallet_info_block .wallet_info_content .wallet_info_item { line-height: 30px; padding: 0; }
+.user_info_container .user_info .tab-content #wallet_info .wallet_info_block .wallet_info_content .wallet_info_item .txt { padding: 0; }

@@ -1,0 +1,6 @@
+
+textarea.activity_notice,
+textarea.activity_forenotice {
+	resize: none;
+	height: 120px;
+}

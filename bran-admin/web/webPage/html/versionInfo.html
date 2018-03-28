@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>版本信息</title>
+
+	<!--bootstrap样式-->
+	<link href="../../css/bootstrap/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<style type="text/css">
+	.table {
+		position: relative;
+		width: 96%;
+		margin: 20px auto;
+	}
+
+	table tbody td.version_no {
+		width: 100px;
+	}
+
+	table tbody td span {
+		display: block;
+		width: 100%;
+		line-height: 30px;
+	}
+</style>
+<table class="table table-striped table-bordered table-hover dataTable">
+	<thead>
+	<tr>
+		<td>版本号</td>
+		<td>更新内容</td>
+	</tr>
+	</thead>
+	<tbody>
+
+	<tr>
+		<td class="version_no">v2.6</td>
+		<td>
+			<span>
+				1.花名册模块：选择、姓名、工号三列固定。
+			</span>
+			<span>
+				2.花名册列表新增字段，包括：身份证号、性别、出生年月等。
+			</span>
+			<span>
+				3.花名册信息编辑弹框样式重构，新增教育信息内容。自定义内容增加日期、数字类型。
+			</span>
+		</td>
+	</tr>
+
+	<tr>
+		<td class="version_no">v2.5</td>
+		<td>
+			<span>
+				1.权限功能重构。
+			</span>
+			<span>
+				2.工资的模块：日期显示优化。
+			</span>
+		</td>
+	</tr>
+
+	<tr>
+		<td class="version_no">v2.4</td>
+		<td>
+			<span>
+				1.将原web薪资单的功能迁移到企业平台。
+				移除了导入/薪资条、已发布薪资条、未导入薪资条模块。
+				新增了导入薪资单、历史薪资单模块。
+			</span>
+		</td>
+	</tr>
+
+	<tr>
+		<td class="version_no">v2.3</td>
+		<td>
+			<span>1.排班视图查询优化</span>
+			<span>2.修改出勤：添加请假、加班之前增加类型下拉框，根据配置动态显示；</span>
+			<span>3.加班设置、假期设置中，默认工作日加班、事假必选，不可取消选中</span>
+		</td>
+	</tr>
+
+	<tr>
+		<td class="version_no">v2.2</td>
+		<td>
+			<span>1.花名册增加导入功能，支持批量导入员工信息，员工扫码直接绑定</span>
+			<span>2.菜单入口调整：【设置中心-通用设置、部门】调整到【员工管理-组织架构、员工配置】</span>
+			<span>3.花名册编辑优化，员工信息归类，编辑信息更加便捷</span>
+		</td>
+	</tr>
+
+	<tr>
+		<td class="version_no">v2.1</td>
+		<td>
+			<span>1.出勤申诉、出勤范围页面删除</span>
+			<span>2.出勤配置：新增假期设置、加班设置、考勤配置功能</span>
+			<span>3.审批管理：新增页面，获取审批列表，审核、查看明细弹窗</span>
+		</td>
+	</tr>
+
+	<tr>
+		<td class="version_no">v2.0</td>
+		<td>
+			<span>1.班次管理：页面重构，新增休息时段、旷工设置、加班设置多字段预览</span>
+			<span>
+				2.班次详情：新增页面，增加中间打卡点、增加人性打卡、增加有效打卡时间、
+				增加休息时间、增加上下班内工时计算、增加加班工时设置、增加旷工：迟到、早退、缺卡旷工
+			</span>
+			<span>3.出勤汇总：页面重构，列表重构，新增请假次数、迟到次数、早退次数、旷工次数、缺卡次数弹框</span>
+			<span>4.出勤明细：新增页面，获取员工的出勤详情，新增修改出勤功能</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="version_no">v1.6</td>
+		<td>
+			<span>1.排班规律：页面重构，新增 启用关闭排班</span>
+			<span>2.排班规律详情：新增页面</span>
+			<span>3.排班视图：增加个人当日排班、增加发布状态、增加排班名称</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="version_no">v1.5</td>
+		<td>
+			<span>1.薪资管理：导入薪资弹框中提示信息更改</span>
+			<span>2.bug修复</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="version_no">v1.4</td>
+		<td>
+			<span>1.增加手机考勤功能</span>
+			<span>2.bug修复</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="version_no">v1.3.1</td>
+		<td>
+			<span>1.增加对晚班的支持</span>
+			<span>2.考勤管理员不限制是否绑定</span>
+			<span>3.加班时间不能超过5小时</span>
+			<span>4.早退10分钟不算早退</span>
+			<span>5.bug修复</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="version_no">v1.3</td>
+		<td>
+			<span>1.新增出勤配置模块</span>
+			<span>2.新增出勤模块</span>
+			<span>3.新增出勤汇总模块</span>
+			<span>4.花名册增加员工信息导入考勤机功能</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="version_no">v1.2.4</td>
+		<td>
+			<span>1.排班管理</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="version_no">v1.2.3</td>
+		<td>
+			<span>1.UI调整</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="version_no">v1.2.2</td>
+		<td>
+			<span>1.员工手册、厂车路线支持pdf；</span>
+			<span>2.excel支持.xlsx版本的导入；</span>
+			<span>3.薪资导入优化,增加导入失败列表；</span>
+			<span>4.添加花名册自定义类；</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="version_no">v1.2.1</td>
+		<td>
+			<span>1.首页添加同意入职信息栏；</span>
+			<span>2.同意入职添加一年、二年、三年和无期限选择；</span>
+			<span>3.花名册新增工号修改功能；</span>
+			<span>4.花名册新增开户行信息、银行卡号、面试日期、供应来源、员工性质和班车点；</span>
+			<span>5.优化薪资模板导入功能；</span>
+			<span>6.修改薪资导入行数位200行；</span>
+			<span>7.部门添加人员架构统计；</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="version_no">v1.2</td>
+		<td>
+			<span>1.增加首页合同和试用期到期提醒；</span>
+			<span>2.增加花名册修改；</span>
+			<span>3.增加人脸识别匹配度反馈；</span>
+			<span>4.增加工号前缀;</span>
+			<span>5.增加工资条导入功能；</span>
+			<span>6.增加子账号功能；</span>
+			<span>7.解决已知问题；</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="version_no">v1.0</td>
+		<td>
+			<span>1.增加密码修改功能；</span>
+			<span>2.增加待入职名单，花名册，离职员工排序功能</span>
+			<span>3.增加用户操作日志功能</span>
+			<span>4.增加职位，班组，工段和离职原因修改功能；</span>
+			<span>5.增加花名册导出数据项；</span>
+			<span>6.增加验证码功能；</span>
+			<span>7.优化下载导出文件的名称；</span>
+			<span>8.修复严重性bug；</span>
+		</td>
+	</tr>
+
+	</tbody>
+</table>
+
+</body>
+</html>

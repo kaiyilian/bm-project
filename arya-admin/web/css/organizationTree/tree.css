@@ -1,0 +1,119 @@
+.container {
+    background-color: transparent !important;
+    padding: 0 !important;
+    border: 0 !important;
+    height: 100%;
+}
+
+.container .aryaZtreeContainer {
+    width: 250px;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    background-color: #fff;
+}
+
+.container .aryaZtreeContainer .ibox-title {
+    border: 0;
+}
+
+.container .aryaZtreeContainer .ztree_search_container {
+    padding: 5px 8px;
+}
+
+.container .aryaZtreeContainer .ztreeContainer {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: calc(100% - 92px);
+}
+
+.container .aryaZtreeContainer .ztree .node_name {
+    position: relative;
+    display: block;
+    line-height: 24px;
+    max-width: 190px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    overflow: hidden; /* 超出部分不显示 */
+}
+
+.container .aryaZtreeContainer .ztree li a {
+    height: 24px;
+}
+
+.container .aryaZtreeContainer .ztree li span.button.add {
+    background: url("../../img/icon_setting_dept_add.png");
+    background-size: 100% 100%;
+    margin-left: 5px;
+}
+
+.container .aryaZtreeContainer .ztree li span.button.edit {
+    background: url("../../img/icon_setting_dept_modify.png");
+    background-size: 100% 100%;
+    margin-left: 5px;
+}
+
+.container .aryaZtreeContainer .ztree li span.button.remove {
+    background: url("../../img/icon_setting_dept_del.png");
+    background-size: 100% 100%;
+    margin-left: 5px;
+}
+
+.container .aryaZtreeContainer .ztree li span.button {
+    float: left;
+    position: relative;
+    top: 5px;
+}
+
+/*一级集团*/
+.container .aryaZtreeContainer .ztree li span.button.rootNode_1_ico_open,
+.container .aryaZtreeContainer .ztree li span.button.rootNode_1_ico_close,
+.container .aryaZtreeContainer .ztree li span.button.rootNode_1_ico_docu {
+    background: url("../../img/icon_group.png");
+    background-size: 100% 100%;
+}
+
+/*一级公司*/
+.container .aryaZtreeContainer .ztree li span.button.rootNode_4_ico_open,
+.container .aryaZtreeContainer .ztree li span.button.rootNode_4_ico_close,
+.container .aryaZtreeContainer .ztree li span.button.rootNode_4_ico_docu {
+    background: url("../../img/icon_com_fir.png");
+    background-size: 100% 100%;
+}
+
+/*二级公司*/
+.container .aryaZtreeContainer .ztree li span.button.subNode_2_ico_open,
+.container .aryaZtreeContainer .ztree li span.button.subNode_2_ico_close,
+.container .aryaZtreeContainer .ztree li span.button.subNode_2_ico_docu {
+    background: url("../../img/icon_com_sec.png");
+    background-size: 100% 100%;
+}
+
+/*二级部门*/
+.container .aryaZtreeContainer .ztree li span.button.subNode_3_ico_open,
+.container .aryaZtreeContainer .ztree li span.button.subNode_3_ico_close,
+.container .aryaZtreeContainer .ztree li span.button.subNode_3_ico_docu {
+    background: url("../../img/icon_dept.png");
+    background-size: 100% 100%;
+}
+
+.container .aryaZtreeContainer .ztree li {
+    line-height: 24px;
+}
+
+.container .aryaZtreeContainer .ztree li span.button {
+    margin-right: 5px;
+}
+
+.container .aryaZtreeContainer .ztree li a.curSelectedNode {
+    height: 25px;
+}
+
+.container .corp_content {
+    width: calc(100% - 250px);
+    height: 100%;
+    overflow-y: auto;
+    padding-right: 0;
+}
+

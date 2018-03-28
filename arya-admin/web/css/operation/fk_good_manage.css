@@ -1,0 +1,62 @@
+
+.fk_good_manage_container .content .table_container table tbody td img {
+	width: 40px;
+	height: 40px;
+}
+
+.fk_good_manage_container .content .table_container table tbody td.operate {
+	width: 200px;
+}
+
+.fk_good_manage_container .content .table_container table tbody td.operate .btn:not(:last-child) {
+	margin-right: 8px;
+}
+
+.fk_good_manage_container .content .table_container table tbody td.good_name,
+.fk_good_manage_container .content .table_container table tbody td.good_detail {
+	width: 20%;
+}
+
+.good_info_modal .modal-body .row .col-xs-2 {
+	padding: 0;
+}
+
+.good_info_modal .modal-body .row .thumbnail {
+	margin-bottom: 0;
+	height: 100px;
+}
+
+.good_info_modal .modal-body .row .shuffling_img_list .thumbnail {
+	height: 65px;
+}
+
+.good_info_modal .modal-body .row .thumbnail img.icon_add_default {
+	width: 20%;
+	height: 100%;
+}
+
+.good_info_modal .modal-body .row .good_info_detail {
+	position: relative;
+	resize: none;
+	height: 100px;
+}
+
+.good_info_modal .modal-body .row .category_list span {
+	margin-right: 5px;
+}
+
+.good_info_modal .modal-body .row .category_list span.is_choose {
+	background-color: #1ab394
+}
+
+.category_info_modal .modal-body .btn_clear {
+	margin: 10px 0;
+}
+
+.category_info_modal .modal-body .unit_list span {
+	margin-right: 5px;
+}
+
+.category_info_modal .modal-body .unit_list span.is_choose {
+	background-color: #1ab394
+}

@@ -1,0 +1,46 @@
+.fk_order_manage_container  .content .table_container table {
+	width: 1400px;
+}
+
+.fk_order_manage_container  .content .table_container table tbody td.order_operate {
+	width: 170px;
+}
+
+.fk_order_manage_container  .content .table_container table tbody td.order_operate span:not(:last-child) {
+	margin-right: 8px;
+}
+
+.fk_order_manage_container  .content .table_container table tbody td.order_address,
+.fk_order_manage_container  .content .table_container table tbody td.order_product_name,
+.fk_order_manage_container  .content .table_container table tbody td.order_unit {
+	width: 150px;
+}
+
+.order_modify_modal .modal-body .row .category_list span {
+	margin-right: 5px;
+}
+
+.order_modify_modal .modal-body .row .category_list span.is_choose {
+	background-color: #1ab394
+}
+
+.order_category_info_modal .modal-body .btn_clear {
+	margin: 10px 0;
+}
+
+.order_category_info_modal .modal-body .unit_list span {
+	margin-right: 5px;
+}
+
+.order_category_info_modal .modal-body .unit_list span.is_choose {
+	background-color: #1ab394
+}
+
+/* chosen select 查询框 */
+.fk_order_manage_container .chosen-container-multi .chosen-choices {
+	border: 0;
+}
+
+.fk_order_manage_container .input-group .form-control {
+	z-index: inherit;
+}

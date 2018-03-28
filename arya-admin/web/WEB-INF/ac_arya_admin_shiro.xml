@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+		<property name="securityManager" ref="aryaSecurityManager"/>
+		<property name="loginUrl" value="/login"/>
+		<property name="unauthorizedUrl" value="/permission_fail"/>
+		<property name="filterChainDefinitions">
+			<value>
+				/admin/sys/user/** =                    authc, perms[sys:user:*]
+				/admin/sys/role/** =                    authc, perms[sys:role:*]
+				/admin/sys/config/** =                  authc, perms[sys:config:*]
+
+                <!--企业管理-->
+                /admin/corporation/check_in_code =      authc, perms[corp:base_info:*]
+                /admin/corporation/organization/tree =  authc, perms[corp:base_info:*]
+                /admin/corporation/group/organization/tree = authc, perms[corp:base_info:*]
+                /admin/corporation/create_update =      authc, perms[corp:base_info:*]
+                /admin/corporation/delete =             authc, perms[corp:base_info:*]
+                /admin/corporation/get/detail =         authc, perms[corp:base_info:*]
+                /admin/corporation/user/** =            authc, perms[corp:user:*]
+                /admin/corporation/entry/** =           authc, perms[corp:checkin:*]
+                /admin/corporation/welfare/** =         authc, perms[corp:welfare:*]
+                /admin/work_attendance/** =             authc, perms[corp:attendance:*]
+                /admin/corporation/attendance/** =      authc, perms[corp:attendance:*]
+
+                <!--企业电子合同服务页面-->
+                /admin/e_contract/service/info/page =   authc, perms[corp:econtract:*]
+
+				<!--社保基础信息-->
+				<!--/admin/soin/district/type/** = authc, perms[soin:base_info:*]-->
+				<!--/admin/soin/district/** = authc, perms[soin:base_info:*]-->
+				<!--调试中-->
+
+				/admin/soin/district/tree =             authc, perms[soin:base_info:view]
+				/admin/soin/district/type =             authc, perms[soin:base_info:view]
+
+				/admin/soin/district/delete =           authc, perms[soin:base_info:modify]
+				/admin/soin/district/**/create =        authc, perms[soin:base_info:modify]
+				/admin/soin/district/**/update =        authc, perms[soin:base_info:modify]
+				/admin/soin/type/**/create =            authc, perms[soin:base_info:modify]
+				/admin/soin/type/**/update =            authc, perms[soin:base_info:modify]
+				/admin/soin/district/** =               authc, perms[soin:base_info:view]
+				<!--/admin/soin/district/** = authc, perms[soin:base_info:*]-->
+
+				<!--废弃-->
+				<!--/admin/soin/district/create = authc, perms[soin:base_info:district:*]-->
+				<!--/admin/soin/district/type/** = authc, perms[soin:base_info:view]-->
+				<!--/admin/soin/district/type/create = authc, perms[soin:base_info:type:*]-->
+				<!--/admin/soin/district/type/update = authc, perms[soin:base_info:type:*]-->
+				<!--/admin/soin/district/type/version/create = authc, perms[soin:base_info:type_version:*]-->
+				<!--/admin/soin/district/type/version/update = authc, perms[soin:base_info:type_version:*]-->
+
+				/admin/soin/person/** =                 authc, perms[soin:person:*]
+				/admin/soin/order/manage/** =           authc, perms[soin:order:*]
+				/admin/soin/order/query/** =            authc, perms[soin:order_query:*]
+				<!--/admin/salary/calculate/** = authc, perms[salary:calculate:*]-->
+				/admin/salary/calculate/query =         authc, perms[salary:calculate:import]
+				/admin/salary/calculate/upload2Calculate = authc, perms[salary:calculate:import]
+				/admin/salary/calculate/import =        authc, perms[salary:calculate:import]
+				/admin/salary/calculate/export =        authc, perms[salary:calculate:export]
+				/admin/salary/calculate/delete =        authc, perms[salary:calculate:delete]
+				/admin/salary/calculate/rule/** =       authc, perms[salary:calculate:rule]
+				/admin/salary/import/** =               authc, perms[salary:import:*]
+				/admin/operation/ads/** =               authc, perms[operation:ads:*]
+                /admin/news/** =                        authc, perms[operation:news:*]
+                /admin/red/** =                         authc, perms[operation:red_packet:*]
+                /admin/activity/** =                    authc, perms[operation:enroll:*]
+
+				<!--社保对账-->
+				/admin/suppliers/setting/** =           authc, perms[soin:audit:supplier]
+				/admin/soin/order/import/** =           authc, perms[soin:audit:import]
+				/admin/soin/bill/manage/** =            authc, perms[soin:audit:export]
+				/admin/soin/bill/manage/delete =        authc, perms[soin:audit:export:delete]
+				/admin/soin/order/cancel =              authc, perms[soin:audit:export:cancel]
+				<!--/admin/soin/order/batch/manage/** = authc, perms[soin:audit:batch]-->
+				/admin/soin/bill/batch/manage/** =      authc, perms[soin:audit:batch]
+				<!--福库-->
+				/admin/welfare/goods/** =               authc, perms[welfare.goods.*]
+				/admin/welfare/order/** =               authc, perms[welfare.order.*]
+				/admin/welfare/notice/** =              authc, perms[welfare.notice.*]
+				/admin/welfare/coupon_def/** =          authc, perms[welfare.coupon.*]
+				/admin/welfare/coupon/** =              authc, perms[welfare.coupon.*]
+				<!--犯罪记录-->
+				/admin/criminal/** =                    authc, perms[tools:criminal:*]
+				<!--用户管理-->
+				/admin/user/** =                        authc, perms[user:manage:*]
+				<!-- 钱包用户管理 -->
+				/admin/wallet/** =                      authc, perms[user:wallet:*]
+				<!--日志管理-->
+				/admin/sys/log/** =                     authc, perms[sys:log:*]
+				<!--其他-->
+				/docs/** =                              authc, perms[document:read]
+                <!--客户商机-->
+                /admin/business/** =                    authc, perms[business:customer:*]
+                <!--电子工资单-->
+                /admin/esalary/download/**  =           authc, perms[payroll:download:*]
+                /admin/esalary/**  =                    authc, perms[payroll:manage:*]
+                <!--程序日志下载-->
+                /admin/online/log/**                    authc, perms[devops:logs:*]
+			</value>
+		</property>
+	</bean>
+
+	<!--<bean id="aryaSecurityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">-->
+		<!--&lt;!&ndash; Single realm app.  If you have multiple realms, use the 'realms' property instead. &ndash;&gt;-->
+		<!--<property name="realm" ref="aryaSecurityRealm"/>-->
+		<!--&lt;!&ndash; By default the servlet container sessions will be used.  Uncomment this line-->
+			 <!--to use shiro's native sessions (see the JavaDoc for more): &ndash;&gt;-->
+		<!--&lt;!&ndash; <property name="sessionMode" value="native"/> &ndash;&gt;-->
+	<!--</bean>-->
+	<!--<bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/>-->
+
+	<!--&lt;!&ndash; Define the Shiro Realm implementation you want to use to connect to your back-end &ndash;&gt;-->
+	<!--&lt;!&ndash; security datasource: &ndash;&gt;-->
+	<!--<bean id="aryaSecurityRealm" class="com.bumu.arya.admin.shiro.AryaAdminSecurityRealm"/>-->
+
+	<!--<bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"-->
+		  <!--depends-on="lifecycleBeanPostProcessor"/>-->
+
+	<!--<bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">-->
+		<!--<property name="securityManager" ref="aryaSecurityManager"/>-->
+	<!--</bean>-->
+
+
+</beans>

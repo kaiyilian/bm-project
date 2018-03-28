@@ -1,0 +1,46 @@
+
+.margin_b_10 {
+	margin-bottom: 10px;
+}
+
+.margin_t_10 {
+	margin-top: 10px;
+}
+
+.margin_tb {
+	margin: 10px auto;
+}
+
+.txt-center {
+	text-align: center;
+}
+
+.line-height-34 {
+	line-height: 34px;
+}
+
+.f14 {
+	font-size: 14px;
+}
+
+.f16 {
+	font-size: 16px;
+}
+
+.f18 {
+	font-size: 18px;
+}
+
+.f-bold {
+	font-weight: bold;
+}
+
+.center {
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+}
+
+.f_right {
+	float: right;
+}

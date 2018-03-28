@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAKI,gDAAe,GACb,QAAQ,EAAE,QAAQ,EAClB,KAAK,EAAE,IAAI,EACX,KAAK,EAAE,IAAI;AAEX,sDAAM,GACJ,QAAQ,EAAE,QAAQ,EAClB,KAAK,EAAE,IAAI,EACX,WAAW,EAAE,IAAI,EACjB,WAAW,EAAE,IAAI,EACjB,SAAS,EAAE,IAAI;AAOb,sEAAQ,GACN,UAAU,EAAE,IAAI",
+"sources": ["access_detail.scss"],
+"names": [],
+"file": "access_detail.css"
+}

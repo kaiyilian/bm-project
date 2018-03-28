@@ -1,0 +1,80 @@
+
+.perm_table {
+    height: 300px;
+    overflow-y: scroll;
+}
+
+#check_in_QRCode img {
+    width: 150px;
+    height: 150px;
+}
+
+#tb_corp_manager tbody .item.active,
+#tb_corp_manager tbody .item.active td {
+    background-color: #B0BED9;
+}
+
+#corp_user_permission .node_name {
+    float: left;
+    /*display: flex;*/
+    /*max-width: max-content;*/
+}
+
+#corp_user_permission .node_name > div {
+    float: left;
+    height: 24px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    overflow: hidden; /* 超出部分不显示 */
+}
+
+#corp_user_permission .perm_name {
+    width: 150px;
+}
+
+#corp_user_permission .perm_icon {
+    padding: 0 10px;
+}
+
+#corp_user_permission .perm_code {
+    width: 250px;
+}
+
+#corp_user_permission .perm_desc {
+    width: 250px;
+}
+
+/*权限弹框*/
+
+.corp_user_permission_modal .ztree li {
+    line-height: 24px;
+}
+
+.corp_user_permission_modal .ztree li a {
+    height: 24px;
+    /*width: 100%;*/
+}
+
+.corp_user_permission_modal .ztree .node_name {
+    position: relative;
+    display: block;
+    line-height: 24px;
+    /*max-width: 190px;*/
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    overflow: hidden; /* 超出部分不显示 */
+}
+
+/*一级目录*/
+
+.corp_user_permission_modal .ztree li.level0 a.level0 .node_name .perm_code {
+    margin-left: 36px;
+}
+
+.corp_user_permission_modal .ztree li.level0 ul.level0 li.level1 a.level1 .node_name .perm_code {
+    margin-left: 18px;
+}
+
+

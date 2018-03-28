@@ -1,0 +1,32 @@
+
+.modal .modal-body .row {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.modal .modal-body .row .txt {
+    line-height: 34px;
+}
+
+.sys_config_manage_container .content .table_container #tb_config_manage tbody tr td div {
+    word-break: break-all;
+    margin: 0 auto;
+}
+
+.sys_config_manage_container .content .table_container #tb_config_manage tbody .index div,
+.sys_config_manage_container .content .table_container #tb_config_manage tbody .is_deprecated div {
+    width: 34px;
+}
+
+.sys_config_manage_container .content .table_container #tb_config_manage tbody .key div {
+    width: 150px;
+}
+
+.sys_config_manage_container .content .table_container #tb_config_manage tbody .value div {
+    width: 300px;
+}
+
+.sys_config_manage_container .content .table_container #tb_config_manage tbody .remark div {
+    width: 100px;
+}
+

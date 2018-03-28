@@ -1,0 +1,37 @@
+
+.website_recruit_manage_container {
+  .content {
+    .table_container {
+      table {
+        tbody {
+          .operate {
+            .btn:not(:last-child) {
+              margin-right: 8px;
+            }
+
+          }
+        }
+      }
+    }
+  }
+}
+
+.recruit_info_modal {
+  .modal-body {
+
+    height: 500px;
+    overflow: auto;
+
+    & > .row {
+      margin-bottom: 10px;
+
+      .txt{
+        line-height:34px;
+      }
+      textarea {
+        height: 300px;
+      }
+
+    }
+  }
+}

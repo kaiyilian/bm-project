@@ -1,0 +1,169 @@
+/* 左侧 树结构 */
+
+.soinBaseZtreeContainer {
+	height: calc(100%);
+}
+
+.soinBaseZtreeContainer > .ibox {
+	position: relative;
+	height: calc(100%);
+}
+
+.soinBaseZtreeContainer > .ibox .operate_list {
+	margin: 0;
+	background-color: #fff;
+	padding: 3px 0;
+	text-align: center;
+}
+
+.soinBaseZtreeContainer > .ibox .operate_list .btn {
+	margin: 0;
+}
+
+.soinBaseZtreeContainer > .ibox #soin_area_choose {
+	height: calc(100% - 84px);
+	overflow-y: auto;
+	padding-bottom: 36px;
+}
+
+.soinBaseZtreeContainer > .ibox #soin_area_choose .ztree li {
+	line-height: 25px;
+	min-height: 25px;
+}
+
+.soinBaseZtreeContainer > .ibox #soin_area_choose .ztree li span.button.noline_open {
+	background-position: -93px -73px;
+}
+
+.soinBaseZtreeContainer > .ibox #soin_area_choose .ztree li span.button.noline_close {
+	background-position: -75px -73px;
+}
+
+.soinBaseZtreeContainer > .ibox #soin_area_choose .ztree li a.curSelectedNode {
+	height: 25px;
+}
+
+.soinBaseZtreeContainer > .ibox .up_list_container {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	margin: 0;
+	background-color: #fff;
+	text-align: center;
+	padding: 3px 0;
+	display: none;
+}
+
+.soinBaseZtreeContainer > .ibox .up_list_container .btn {
+	margin: 0;
+}
+
+/* 右侧 内容 */
+
+.soin_base_info_container {
+	/*background-color: #fff;*/
+	padding: 0;
+	height: calc(100%);
+	overflow-y: auto;
+}
+
+.soin_base_info_container > .row {
+	margin: 0 0 15px 0;
+	background-color: #fff;
+	padding: 0 15px;
+}
+
+.soin_base_info_container .row .name {
+	line-height: 40px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.soin_base_info_container .row .btn_list_container {
+	min-height: 30px;
+	margin: 8px 0;
+}
+
+.soin_base_info_container .row .btn_list_container .btn_add {
+	margin-left: 5px;
+}
+
+.soin_base_info_container .row .btn_list_container .btn_list .btn:not(:last-child) {
+	margin-right: 8px;
+}
+
+.soin_base_info_container .row div[class^='col-md'] {
+	margin-bottom: 10px;
+}
+
+.soin_base_info_container .row div[class^='col-md'] input.form-control {
+	height: 34px;
+}
+
+.soin_base_info_container .row .togglebutton_container {
+	padding: 4px 12px;
+	/*text-align: center;*/
+}
+
+.togglebutton label .toggle:after {
+	top: 0;
+	left: -1px;
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+}
+
+.togglebutton label .toggle,
+.togglebutton label input[type="checkbox][disabled"]:first-child + .toggle {
+	width: 44px;
+	height: 25px;
+}
+
+.togglebutton label input[type=checkbox]:first-child:checked + .toggle:after {
+	left: 20px;
+}
+
+.soin_base_info_container .row button {
+	margin: 10px 0;
+	display: none;
+}
+
+/* 新增 社保类型 版本（补缴、正常） */
+.add_soin_type_version_back_modal .modal-body .row div[class^='col-md'],
+.add_soin_type_version_normal_modal .modal-body .row div[class^='col-md'] {
+	margin-bottom: 10px;
+}
+
+/* 新增社保类型 弹框 */
+.add_soin_type_modal .modal-body .row {
+	margin-bottom: 10px;
+}
+
+/*----------- 原来 样式 ------------*/
+
+.soin_type_version_detail_table {
+	width: 100%;
+}
+
+.soin_type_version_detail_table th, td, .soin_baseInfo_container input {
+	text-align: center;
+	width: 70px;
+	height: 30px;
+}
+
+.soin_type_version_detail_table input {
+	border: 0;
+	-webkit-appearance: none;
+}
+
+#district_tree_chooser_container {
+	overflow: auto;
+	position: fixed;
+	width: 20%;
+	height: 80%;
+}
+
+#district_tree_chooser {
+	width: 100%;
+	height: 100%;
+}

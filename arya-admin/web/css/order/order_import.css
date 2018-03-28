@@ -1,0 +1,70 @@
+
+.order_import_container .content .table_container {
+    overflow: auto;
+    display: none;
+}
+
+.order_import_container .content .line {
+    padding: 10px 15px;
+    line-height: 40px;
+}
+
+.order_import_container .content .line .msg_prompt {
+    cursor: pointer;
+    color: rgba(0, 0, 255, 0.48);
+    /*width: 100px;*/
+    float: left;
+    /*padding-left: 12px;*/
+    /*margin-top: 10px;*/
+}
+
+.order_import_container .content .line .batch_no_container {
+    float: left;
+    margin-left: 20px;
+    display: none;
+}
+
+.order_import_container .content .line .btn_export {
+    float: right;
+    display: none;
+}
+
+.order_import_container .content .table_container table {
+    width: 1900px;
+}
+
+.order_import_container .content .table_container table tbody tr.is_repeat {
+    background-color: rgba(0, 0, 0, 0.30);
+}
+
+.order_import_container .content .table_container table tbody tr td.is_green {
+    color: green;
+}
+
+.order_import_container .content .table_container table tbody tr td.is_blue {
+    color: blue;
+}
+
+.order_import_container .content .table_container table tbody tr td.is_error {
+    color: red;
+    padding-right: 20px;
+}
+
+.order_import_container .content .table_container table tbody tr td.is_error img {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 15px;
+    height: 15px;
+}
+
+.sweet-alert {
+    width: 50%;
+    left: 25%;
+    margin-left: 0;
+}
+
+.sweet-alert h2 {
+    max-height: 180px;
+    overflow: auto;
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.bumu.arya.admin.operation.model.dao.mybatis.RedEnvelopeResultMybatisDao">
+
+    <select id="get" parameterType="com.bumu.arya.admin.operation.controller.command.RedEnvelopeCommand"
+            resultType="com.bumu.arya.admin.operation.result.RedEnvelopeResult">
+
+        SELECT
+        *
+        FROM
+        VIEW_RED_ENVELOPE
+        <where>
+            <if test="start !=null">
+                AND DATE_FORMAT(FROM_UNIXTIME(getTime/1000), '%Y-%m-%d') >= DATE_FORMAT(FROM_UNIXTIME(#{start}/1000), '%Y-%m-%d')
+            </if>
+
+            <if test="end !=null">
+                <![CDATA[AND DATE_FORMAT(FROM_UNIXTIME(getTime/1000), '%Y-%m-%d') <= DATE_FORMAT(FROM_UNIXTIME(#{end}/1000), '%Y-%m-%d')]]>
+            </if>
+
+            <if test="phone !=null and phone != '' ">
+                AND phone LIKE CONCAT('%', #{phone}, '%')
+            </if>
+
+            <if test="redEnvelopeBalance !=null and redEnvelopeBalance!= '' ">
+                AND redEnvelopeBalance = #{redEnvelopeBalance}
+            </if>
+
+        </where>
+
+    </select>
+
+</mapper>

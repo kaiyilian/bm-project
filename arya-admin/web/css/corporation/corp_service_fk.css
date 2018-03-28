@@ -1,0 +1,22 @@
+.corp_service_fk_container {
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+}
+
+.corp_service_fk_container .corp_content .fk_info_container {
+	position: relative;
+	padding: 20px 15px;
+	background-color: #fff;
+	height: 100%;
+}
+
+.corp_service_fk_container .fk_info_container .row .input-group[class*=col-] {
+	float: left;
+	padding: 0 15px;
+}
+
+.corp_service_fk_container .fk_info_container .btn_operate {
+	margin: 20px 0 0;
+}
+

@@ -1,0 +1,145 @@
+
+.is_red {
+	color: red;
+}
+
+.modal .modal-body {
+	overflow: auto;
+	max-height: 500px;
+}
+
+.modal .modal-body .txt {
+	line-height: 34px;
+}
+
+/* 批量修改 */
+
+.order_modify_modal table {
+	text-align: center;
+}
+
+.order_modify_modal table tbody tr td div {
+	width: 80px;
+}
+
+/* 缴纳失败 原因 弹框 */
+
+.soin_pay_fail_modal {
+	z-index: 2051 !important;
+}
+
+/* 订单详情 弹框 */
+
+.order_detail_modal .modal-body table {
+	text-align: center;
+}
+
+.order_detail_modal .modal-body .order_status .btn {
+	margin: 2px 8px 2px 0;
+}
+
+.order_detail_modal .modal-body .order_status .txt {
+	float: left;
+	color: #337ab7;
+	margin-right: 8px;
+}
+
+.order_detail_modal .modal-body .order_status .txt.pay_fail {
+	cursor: pointer;
+}
+
+/* 订单列表 页面 */
+
+.order_manage_container .content {
+	position: relative;
+	/*overflow-y: auto;*/
+}
+
+.order_manage_container .content .search_container .soin_area {
+	cursor: pointer;
+}
+
+.order_manage_container .content .search_container .order_month {
+	cursor: pointer;
+}
+
+.order_manage_container .content .table_container {
+	overflow-y: auto;
+}
+
+.order_manage_container .content .table_container table {
+	/*width: 1900px;*/
+}
+
+.order_manage_container .content .table_container table thead tr td .sort_list {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 16px;
+	height: 100%;
+	padding: 10px 0;
+	line-height: 10px;
+	display: none;
+}
+
+.order_manage_container .content .table_container table thead tr td .sort_list img {
+	position: relative;
+	cursor: pointer;
+}
+
+.order_manage_container .content .table_container table thead tr td .sort_list .sorting_desc {
+	-webkit-transform: rotate(180deg); /*Safari 4+,Google Chrome 1+ */
+	-moz-transform: rotate(180deg); /*Firefox 3.5+*/
+}
+
+.order_manage_container .content .table_container table tbody tr.pay_fail td {
+	background-color: rgba(2, 93, 171, 0.21);
+}
+
+.order_manage_container .content .table_container table tbody tr.pay_success td {
+	background-color: lightgreen;
+}
+
+.order_manage_container .content .table_container table tbody tr td.order_pay_status {
+	position: relative;
+	width: 160px;
+}
+
+.order_manage_container .content .table_container table tbody tr td.order_pay_status span:first-child {
+	margin-right: 8px;
+}
+
+.order_manage_container .content .table_container table tbody tr.pay_fail td.order_pay_status .txt {
+	cursor: pointer;
+	color: #337ab7;
+}
+
+.order_manage_container .content .table_container table tbody tr td.order_operate {
+	position: relative;
+	width: 80px;
+}
+
+.order_manage_container .content .table_container table tbody tr td.order_other_payment {
+	cursor: pointer;
+}
+
+.order_manage_container .content .table_container table tbody tr td input {
+	position: relative;
+	width: 80px;
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	height: 30px;
+	border-color: rgba(0, 0, 0, 0.20);
+}
+
+/* choosen 选择框 */
+
+.order_manage_container .chosen-container-multi .chosen-choices {
+	border: 0;
+}
+
+.order_manage_container .input-group .form-control {
+	z-index: inherit;
+}
+

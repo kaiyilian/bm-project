@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--<bean id="cp00" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">-->
+    <!--<property name="id" value="00"/>-->
+    <!--<property name="permissionCode" value="main:*"/>-->
+    <!--<property name="desc" value="首页"/>-->
+    <!--</bean>-->
+
+    <bean id="cp101901" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+        <property name="id" value="101901"/>
+        <property name="permissionCode" value="roster:contract:expired:*"/>
+        <property name="desc" value="合同到期"/>
+        <property name="isDeprecated" value="1"/>
+    </bean>
+    <bean id="cp102001" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+        <property name="id" value="102001"/>
+        <property name="permissionCode" value="roster:probation:expired:*"/>
+        <property name="desc" value="试用期到期"/>
+        <property name="isDeprecated" value="1"/>
+    </bean>
+    <bean id="cp100301" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+        <property name="id" value="100301"/>
+        <property name="permissionCode" value="employee:roster:disposal_probation:*"/>
+        <property name="desc" value="试用期受理"/>
+        <property name="isDeprecated" value="1"/>
+    </bean>
+    <bean id="cp1008" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+        <property name="id" value="1008"/>
+        <property name="permissionCode" value="message:manage:*"/>
+        <property name="desc" value="消息中心"/>
+        <property name="isDeprecated" value="1"/>
+    </bean>
+
+    <!--员工管理-->
+    <bean id="cp10" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+        <property name="id" value="10"/>
+        <property name="permissionCode" value="employee:*"/>
+        <property name="desc" value="员工管理"/>
+        <property name="isDefault" value="0"/>
+        <property name="corpPermissions">
+            <set>
+
+                <!--员工入职-->
+                <bean id="cp1001" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                    <property name="id" value="1001"/>
+                    <property name="permissionCode" value="employee:prospective:*"/>
+                    <property name="desc" value="员工入职"/>
+                    <property name="isDefault" value="0"/>
+                    <property name="corpPermissions">
+                        <set>
+                            <bean id="cp100100" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="100100"/>
+                                <property name="permissionCode" value="employee:prospective:index:*"/>
+                                <property name="desc" value="员工入职首页"/>
+                                <property name="isDefault" value="0"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+                            <bean id="cp100101" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="100101"/>
+                                <property name="permissionCode" value="employee:prospective:save:*"/>
+                                <property name="desc" value="保存待入职员工"/>
+                                <property name="isDefault" value="0"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+                            <bean id="cp100102" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="100102"/>
+                                <property name="permissionCode" value="employee:prospective:delete:*"/>
+                                <property name="desc" value="删除待入职员工"/>
+                                <property name="isDefault" value="0"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+                            <bean id="cp100103" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="100103"/>
+                                <property name="permissionCode" value="employee:prospective:check:*"/>
+                                <property name="desc" value="导入待入职员工"/>
+                                <property name="isDefault" value="0"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+                            <bean id="cp100104" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="100104"/>
+                                <property name="permissionCode" value="employee:prospective:confirm:*"/>
+                                <property name="desc" value="确认导入待入职员工"/>
+                                <property name="isDefault" value="0"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+
+                            <bean id="cp100201" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="100201"/>
+                                <property name="permissionCode" value="employee:prospective:list:*"/>
+                                <property name="desc" value="查询待入职员工"/>
+                                <property name="isDefault" value="0"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+                            <bean id="cp100202" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="100202"/>
+                                <property name="permissionCode" value="employee:prospective:detail:*"/>
+                                <property name="desc" value="查看待入职员工详情"/>
+                                <property name="isDefault" value="0"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+                            <bean id="cp100203" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="100203"/>
+                                <property name="permissionCode" value="employee:prospective:accept:*"/>
+                                <property name="desc" value="同意待入职员工入职"/>
+                                <property name="isDefault" value="0"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+                            <bean id="cp100204" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="100204"/>
+                                <property name="permissionCode" value="employee:prospective:export:*"/>
+                                <property name="desc" value="导出待入职员工名单"/>
+                                <property name="isDefault" value="0"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+                            <bean id="cp100205" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="100205"/>
+                                <property name="permissionCode" value="employee:prospective:attachment:*"/>
+                                <property name="desc" value="下载待入职员工附件"/>
+                                <property name="isDefault" value="0"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+
+                            <!--废弃-->
+                            <bean id="cp100200" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="100200"/>
+                                <property name="permissionCode" value="prospective:manage:index:*"/>
+                                <property name="desc" value="待入职员工管理首页"/>
+                                <property name="isDefault" value="0"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+                        </set>
+                    </property>
+                </bean>
+
+                <!--废弃-->
+                <bean id="cp1002" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                    <property name="id" value="1002"/>
+                    <property name="permissionCode" value="prospective:manage:*"/>
+                    <property name="desc" value="待入职员工管理"/>
+                    <property name="isDefault" value="0"/>
+                    <property name="isDeprecated" value="1"/>
+                </bean>
+
+                <!--花名册-->
+                <bean id="cp1003" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                    <property name="id" value="1003"/>
+                    <property name="permissionCode" value="employee:roster:*"/>
+                    <property name="desc" value="花名册"/>
+                    <property name="corpPermissions">
+                        <set>
+                            <bean id="cp100300" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="100300"/>
+                                <property name="permissionCode" value="employee:roster:index:*"/>
+                                <property name="desc" value="花名册首页"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+
+                            <bean id="cp100302" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="100302"/>
+                                <property name="permissionCode" value="employee:roster:extend_contract:*"/>
+                                <property name="desc" value="合同续约"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+                            <bean id="cp100303" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="100303"/>
+                                <property name="permissionCode" value="employee:roster:sync:*"/>
+                                <property name="desc" value="考勤机花名册同步"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+                        </set>
+                    </property>
+                </bean>
+
+                <!--离职员工-->
+                <bean id="cp1004" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                    <property name="id" value="1004"/>
+                    <property name="permissionCode" value="employee:leave:*"/>
+                    <property name="desc" value="离职员工"/>
+                </bean>
+
+                <!--组织架构-->
+                <bean id="cp1010" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                    <property name="id" value="1010"/>
+                    <property name="permissionCode" value="employee:structure:*"/>
+                    <property name="desc" value="组织架构"/>
+                    <property name="isDefault" value="0"/>
+                    <property name="corpPermissions">
+                        <set>
+                            <bean id="cp101003" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="101003"/>
+                                <property name="permissionCode" value="employee:structure:index:*"/>
+                                <property name="desc" value="组织架构首页"/>
+                                <property name="isDefault" value="0"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+                            <bean id="cp101000" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="101000"/>
+                                <property name="permissionCode" value="employee:structure:list:*"/>
+                                <property name="desc" value="部门列表"/>
+                                <property name="isDefault" value="0"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+                            <bean id="cp101001" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="101001"/>
+                                <property name="permissionCode" value="employee:structure:save:*"/>
+                                <property name="desc" value="新增/修改部门"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+                            <bean id="cp101002" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="101002"/>
+                                <property name="permissionCode" value="employee:structure:delete:*"/>
+                                <property name="desc" value="删除部门"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+                        </set>
+                    </property>
+                </bean>
+
+                <!--员工配置-->
+                <bean id="cp1040" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                    <property name="id" value="1040"/>
+                    <property name="permissionCode" value="employee:setting:*"/>
+                    <property name="desc" value="员工配置"/>
+                    <property name="corpPermissions">
+                        <set>
+                            <bean id="cp1009" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="1009"/>
+                                <property name="permissionCode" value="employee:setting:common:*"/>
+                                <property name="desc" value="通用"/>
+                                <property name="isDefault" value="0"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+
+                            <!--工段-->
+                            <bean id="cp1011" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="1011"/>
+                                <property name="permissionCode" value="employee:setting:line:*"/>
+                                <property name="desc" value="工段"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+                            <bean id="cp101100" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="101100"/>
+                                <property name="permissionCode" value="employee:setting:line:list"/>
+                                <property name="desc" value="工段列表"/>
+                                <property name="isDefault" value="0"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+                            <bean id="cp101101" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="101101"/>
+                                <property name="permissionCode" value="employee:setting:line:save"/>
+                                <property name="desc" value="新增/修改工段"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+                            <bean id="cp101102" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="101102"/>
+                                <property name="permissionCode" value="employee:setting:line:delete"/>
+                                <property name="desc" value="删除工段"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+
+                            <!--班组-->
+                            <bean id="cp1012" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="1012"/>
+                                <property name="permissionCode" value="employee:setting:shift:*"/>
+                                <property name="desc" value="班组"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+                            <bean id="cp101200" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="101200"/>
+                                <property name="permissionCode" value="employee:setting:shift:list"/>
+                                <property name="desc" value="班组列表"/>
+                                <property name="isDefault" value="0"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+                            <bean id="cp101201" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="101201"/>
+                                <property name="permissionCode" value="employee:setting:shift:save"/>
+                                <property name="desc" value="新增/修改班组"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+                            <bean id="cp101202" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="101202"/>
+                                <property name="permissionCode" value="employee:setting:shift:delete"/>
+                                <property name="desc" value="删除班组"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+
+                            <!--职位-->
+                            <bean id="cp1013" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="1013"/>
+                                <property name="permissionCode" value="employee:setting:position:*"/>
+                                <property name="desc" value="职位"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+                            <bean id="cp101300" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="101300"/>
+                                <property name="permissionCode" value="employee:setting:position:list"/>
+                                <property name="desc" value="职位列表"/>
+                                <property name="isDefault" value="0"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+                            <bean id="cp101301" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="101301"/>
+                                <property name="permissionCode" value="employee:setting:position:save"/>
+                                <property name="desc" value="新增/修改职位"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+                            <bean id="cp101302" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="101302"/>
+                                <property name="permissionCode" value="employee:setting:position:delete"/>
+                                <property name="desc" value="删除职位"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+
+                            <!--离职原因-->
+                            <bean id="cp1014" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="1014"/>
+                                <property name="permissionCode" value="employee:setting:leave_reason:*"/>
+                                <property name="desc" value="离职原因"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+                            <bean id="cp101400" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="101400"/>
+                                <property name="permissionCode" value="employee:setting:leave_reason:list"/>
+                                <property name="desc" value="离职原因列表"/>
+                                <property name="isDefault" value="0"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+                            <bean id="cp101401" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="101401"/>
+                                <property name="permissionCode" value="employee:setting:leave_reason:save"/>
+                                <property name="desc" value="新增/修改离职原因"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+                            <bean id="cp101402" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="101402"/>
+                                <property name="permissionCode" value="employee:setting:leave_reason:delete"/>
+                                <property name="desc" value="删除离职原因"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+
+
+                            <!--工号前缀-->
+                            <bean id="cp1018" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="1018"/>
+                                <property name="permissionCode" value="employee:setting:work_sn_prefix:*"/>
+                                <property name="desc" value="工号前缀"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+                            <bean id="cp101800" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="101800"/>
+                                <property name="permissionCode" value="employee:setting:work_sn_prefix:list"/>
+                                <property name="desc" value="工号前缀列表"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+                            <bean id="cp101801" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="101801"/>
+                                <property name="permissionCode" value="employee:setting:work_sn_prefix:save"/>
+                                <property name="desc" value="保存工号前缀"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+                            <bean id="cp101802" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="101802"/>
+                                <property name="permissionCode" value="employee:setting:work_sn_prefix:delete"/>
+                                <property name="desc" value="删除工号前缀"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+
+                        </set>
+                    </property>
+                </bean>
+
+            </set>
+        </property>
+    </bean>
+
+    <!--考勤管理-->
+    <bean id="cp20" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+        <property name="id" value="20"/>
+        <property name="permissionCode" value="attendance:*"/>
+        <property name="desc" value="考勤管理"/>
+        <property name="corpPermissions">
+            <set>
+                <bean id="cp1021" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                    <property name="id" value="1021"/>
+                    <property name="permissionCode" value="attendance:workShiftType:*"/>
+                    <property name="desc" value="班次管理"/>
+                </bean>
+
+                <bean id="cp1023" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                    <property name="id" value="1023"/>
+                    <property name="permissionCode" value="attendance:rule:*"/>
+                    <property name="desc" value="排班规律"/>
+                </bean>
+
+                <bean id="cp1022" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                    <property name="id" value="1022"/>
+                    <property name="permissionCode" value="attendance:schedule_view:*"/>
+                    <property name="desc" value="排班视图"/>
+                </bean>
+
+                <bean id="cp1039" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                    <property name="id" value="1039"/>
+                    <property name="permissionCode" value="attendance:detail:*"/>
+                    <property name="desc" value="出勤明细"/>
+                </bean>
+
+                <bean id="cp1033" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                    <property name="id" value="1033"/>
+                    <property name="permissionCode" value="attendance:summary:*"/>
+                    <property name="desc" value="出勤汇总"/>
+                </bean>
+
+                <bean id="cp1032" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                    <property name="id" value="1032"/>
+                    <property name="permissionCode" value="attendance:approval:*"/>
+                    <property name="desc" value="审批管理"/>
+                    <property name="corpPermissions">
+                        <set>
+                            <bean id="cp1037" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="1037"/>
+                                <property name="permissionCode" value="attendance:appeal:*"/>
+                                <property name="desc" value="出勤申诉"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+                        </set>
+                    </property>
+                </bean>
+
+                <bean id="cp1031" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                    <property name="id" value="1031"/>
+                    <property name="permissionCode" value="attendance:setting:*"/>
+                    <property name="desc" value="出勤配置"/>
+                    <property name="corpPermissions">
+                        <set>
+                            <bean id="cp1036" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="1036"/>
+                                <property name="permissionCode" value="attendance:setting:range:*"/>
+                                <property name="desc" value="出勤范围"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+                            <bean id="cp1035" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="1035"/>
+                                <property name="permissionCode" value="attendance:setting:device:*"/>
+                                <property name="desc" value="考勤设备管理"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+                        </set>
+                    </property>
+                </bean>
+
+
+                <!--废弃权限-->
+                <bean id="cp1034" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                    <property name="id" value="1034"/>
+                    <property name="permissionCode" value="attendance:feedback:*"/>
+                    <property name="desc" value="出勤反馈"/>
+                    <property name="isDeprecated" value="1"/>
+                </bean>
+            </set>
+        </property>
+    </bean>
+
+    <!--薪资管理-->
+    <bean id="cp30" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+        <property name="id" value="30"/>
+        <property name="permissionCode" value="salary:*"/>
+        <property name="desc" value="薪资管理"/>
+        <property name="corpPermissions">
+            <set>
+                <!--工资单-->
+                <bean id="cp1017" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                    <property name="id" value="1017"/>
+                    <property name="permissionCode" value="salary:payroll:*"/>
+                    <property name="desc" value="工资单"/>
+                    <property name="isDeprecated" value="1"/>
+                    <property name="corpPermissions">
+                        <set>
+                            <bean id="cp101701" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="101701"/>
+                                <property name="permissionCode" value="salary:payroll:unpublished:*"/>
+                                <property name="desc" value="未发布工资单列表"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+                            <bean id="cp101702" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="101702"/>
+                                <property name="permissionCode" value="salary:payroll:published:*"/>
+                                <property name="desc" value="已发布工资单列表"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+                            <bean id="cp101703" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="101703"/>
+                                <property name="permissionCode" value="salary:payroll:publish:*"/>
+                                <property name="desc" value="发布工资单"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+                            <bean id="cp101704" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="101704"/>
+                                <property name="permissionCode" value="salary:payroll:delete:*"/>
+                                <property name="desc" value="删除工资单"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+                        </set>
+                    </property>
+                </bean>
+            </set>
+        </property>
+    </bean>
+
+    <!--电子合同-->
+    <bean id="cp40" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+        <property name="id" value="40"/>
+        <property name="permissionCode" value="e_contract:*"/>
+        <property name="desc" value="电子合同"/>
+        <property name="corpPermissions">
+            <set>
+                <!--暂时废弃，等待电子合同功能模块如果有拆分再启用-->
+                <bean id="cp1038" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                    <property name="id" value="1038"/>
+                    <property name="permissionCode" value="e_contract:manage:*"/>
+                    <property name="desc" value="合同管理"/>
+                    <property name="isDeprecated" value="1"/>
+                </bean>
+            </set>
+        </property>
+    </bean>
+
+    <!--企业管理-->
+    <bean id="cp50" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+        <property name="id" value="50"/>
+        <property name="permissionCode" value="corp:*"/>
+        <property name="desc" value="企业管理"/>
+        <property name="corpPermissions">
+            <set>
+                <bean id="cp1005" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                    <property name="id" value="1005"/>
+                    <property name="permissionCode" value="corp:info:*"/>
+                    <property name="desc" value="企业信息管理"/>
+                    <property name="corpPermissions">
+                        <set>
+                            <bean id="cp1006" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="1006"/>
+                                <property name="permissionCode" value="corp:info:handbook:*"/>
+                                <property name="desc" value="企业员工手册"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+                            <bean id="cp1007" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                                <property name="id" value="1007"/>
+                                <property name="permissionCode" value="corp:info:bus:*"/>
+                                <property name="desc" value="厂车路线"/>
+                                <property name="isDeprecated" value="1"/>
+                            </bean>
+                        </set>
+                    </property>
+                </bean>
+                <bean id="cp1019" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                    <property name="id" value="1019"/>
+                    <property name="permissionCode" value="corp:notice:*"/>
+                    <property name="desc" value="企业公告"/>
+                </bean>
+            </set>
+        </property>
+    </bean>
+
+    <!--设置中心-->
+    <bean id="cp60" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+        <property name="id" value="60"/>
+        <property name="permissionCode" value="setting:*"/>
+        <property name="desc" value="设置中心"/>
+        <property name="corpPermissions">
+            <set>
+                <bean id="cp1015" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                    <property name="id" value="1015"/>
+                    <property name="permissionCode" value="setting:op_log:*"/>
+                    <property name="desc" value="操作日志"/>
+                </bean>
+            </set>
+        </property>
+    </bean>
+
+    <!--权限管理-->
+    <bean id="cp70" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+        <property name="id" value="70"/>
+        <property name="permissionCode" value="user:*"/>
+        <property name="desc" value="权限管理"/>
+        <property name="isNoAssign" value="1"/>
+        <property name="corpPermissions">
+            <set>
+                <bean id="cp1016" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                    <property name="id" value="1016"/>
+                    <property name="permissionCode" value="user:account:*"/>
+                    <property name="desc" value="账号管理"/>
+                    <property name="isNoAssign" value="1"/>
+                </bean>
+                <bean id="cp1111" class="com.bumu.bran.admin.model.entity.CorpPermissionEntity">
+                    <property name="id" value="1111"/>
+                    <property name="permissionCode" value="foo:bar:*"/>
+                    <property name="desc" value="FOOBAR"/>
+                </bean>
+            </set>
+        </property>
+    </bean>
+
+    <!--初始化的初始化-->
+    <bean id="branSecurityInitializer" class="com.bumu.arya.admin.corporation.BranSecurityInitializer">
+        <property name="permissions">
+            <set>
+                <ref bean="cp10"/>
+                <ref bean="cp20"/>
+                <ref bean="cp30"/>
+                <ref bean="cp40"/>
+                <ref bean="cp50"/>
+                <ref bean="cp60"/>
+                <ref bean="cp70"/>
+                <!--废弃-->
+                <ref bean="cp101901"/>
+                <ref bean="cp102001"/>
+                <ref bean="cp100301"/>
+                <ref bean="cp1008"/>
+            </set>
+        </property>
+    </bean>
+</beans>

@@ -1,0 +1,141 @@
+.table {
+	border-radius: 1px; margin-bottom: 0px !important; border-bottom-color: rgb(221, 221, 221); border-bottom-width: 1px; border-bottom-style: solid; border-collapse: collapse !important;
+}
+.fixed-table-container {
+	border-radius: 4px; border: 1px solid rgb(221, 221, 221); border-image: none; clear: both; position: relative; -webkit-border-radius: 4px; -moz-border-radius: 4px;
+}
+.fixed-table-header {
+	border-radius: 4px 4px 0px 0px; overflow: hidden; -webkit-border-radius: 4px 4px 0 0; -moz-border-radius: 4px 4px 0 0;
+}
+.fixed-table-body {
+	height: 100%; -ms-overflow-x: auto; -ms-overflow-y: auto;
+}
+.fixed-table-container table {
+	width: 100%;
+}
+.fixed-table-container thead th {
+	margin: 0px; padding: 0px; height: 0px; border-left-color: rgb(221, 221, 221); border-left-width: 1px; border-left-style: solid;
+}
+.fixed-table-container thead th:first-child {
+	border-left-color: currentColor; border-left-width: medium; border-left-style: none; border-top-left-radius: 4px; -webkit-border-top-left-radius: 4px; -moz-border-radius-topleft: 4px;
+}
+.fixed-table-container thead th .th-inner {
+	padding: 8px; line-height: 24px; overflow: hidden; vertical-align: top; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.fixed-table-container thead th .sortable {
+	cursor: pointer;
+}
+.fixed-table-container tbody td {
+	border-left-color: rgb(221, 221, 221); border-left-width: 1px; border-left-style: solid;
+}
+.fixed-table-container tbody tr:first-child td {
+	border-top-color: currentColor; border-top-width: medium; border-top-style: none;
+}
+.fixed-table-container tbody td:first-child {
+	border-left-color: currentColor; border-left-width: medium; border-left-style: none;
+}
+.fixed-table-container tbody .selected td {
+	background-color: rgb(245, 245, 245);
+}
+.fixed-table-container .bs-checkbox {
+	text-align: center;
+}
+.fixed-table-container .bs-checkbox .th-inner {
+	padding: 8px 0px;
+}
+.fixed-table-container input[type=checkbox] {
+	margin: 0px auto !important;
+}
+.fixed-table-container input[type=radio] {
+	margin: 0px auto !important;
+}
+.fixed-table-container .no-records-found {
+	text-align: center;
+}
+.fixed-table-pagination .pagination {
+	margin-top: 10px; margin-bottom: 10px;
+}
+.fixed-table-pagination .pagination-detail {
+	margin-top: 10px; margin-bottom: 10px;
+}
+.fixed-table-pagination .pagination a {
+	padding: 6px 12px; line-height: 1.4285;
+}
+.fixed-table-pagination .pagination-info {
+	line-height: 34px; margin-right: 5px;
+}
+.fixed-table-pagination .btn-group {
+	vertical-align: middle; display: inline-block; position: relative;
+}
+.fixed-table-pagination .dropup .dropdown-menu {
+	margin-bottom: 0px;
+}
+.fixed-table-pagination .page-list {
+	display: inline-block;
+}
+.fixed-table-toolbar .columns-left {
+	margin-right: 5px;
+}
+.fixed-table-toolbar .columns-right {
+	margin-left: 5px;
+}
+.fixed-table-toolbar .columns label {
+	padding: 3px 20px; line-height: 1.4285; clear: both; font-weight: 400; display: block;
+}
+.fixed-table-toolbar .bars {
+	line-height: 34px; margin-top: 10px; margin-bottom: 10px; position: relative;
+}
+.fixed-table-toolbar .columns {
+	line-height: 34px; margin-top: 10px; margin-bottom: 10px; position: relative;
+}
+.fixed-table-toolbar .search {
+	line-height: 34px; margin-top: 10px; margin-bottom: 10px; position: relative;
+}
+.fixed-table-pagination li.disabled a {
+	cursor: default; pointer-events: none;
+}
+.fixed-table-loading {
+	left: 0px; top: 42px; text-align: center; right: 0px; bottom: 0px; display: none; position: absolute; z-index: 99; background-color: rgb(255, 255, 255);
+}
+.fixed-table-body .card-view .title {
+	text-align: left !important; font-weight: 700; display: inline-block; min-width: 30%;
+}
+.fixed-table-body thead th .th-inner {
+	box-sizing: border-box;
+}
+.table td {
+	vertical-align: middle; box-sizing: border-box;
+}
+.table th {
+	vertical-align: middle; box-sizing: border-box;
+}
+.fixed-table-toolbar .dropdown-menu {
+	text-align: left; overflow: auto; max-height: 300px;
+}
+.fixed-table-toolbar .btn-group > .btn-group {
+	margin-left: -1px !important; display: inline-block;
+}
+.fixed-table-toolbar .btn-group > .btn-group > .btn {
+	border-radius: 0px;
+}
+.fixed-table-toolbar .btn-group > :first-child.btn-group > .btn {
+	border-top-left-radius: 4px; border-bottom-left-radius: 4px;
+}
+.fixed-table-toolbar .btn-group > :last-child.btn-group > .btn {
+	border-top-right-radius: 4px; border-bottom-right-radius: 4px;
+}
+.table > thead > tr > th {
+	vertical-align: bottom; border-bottom-color: rgb(221, 221, 221); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.table thead > tr > th {
+	margin: 0px; padding: 0px;
+}
+.pull-right .dropdown-menu {
+	left: auto; right: 0px;
+}
+p.fixed-table-scroll-inner {
+	width: 100%; height: 200px;
+}
+div.fixed-table-scroll-outer {
+	left: 0px; top: 0px; width: 200px; height: 150px; overflow: hidden; visibility: hidden;
+}

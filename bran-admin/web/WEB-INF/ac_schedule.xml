@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="smsMessageServiceImplForSchedule" class="com.bumu.bran.tools.service.impl.SmsMessageServiceImpl">
+		<property name="smsContentFormat" value="%s提醒您，距离%s入职还有%d天。【不木科技】"/>
+		<!--<property name="smsGatewayUrl" value="http://xtx.telhk.cn:8080/v2sms.aspx"/>-->
+        <property name="smsGatewayUrl" value="http://121.52.209.124:8888/v2sms.aspx"/>
+		<property name="smsUserId" value="5962"/>
+		<property name="smsUserName" value="a103939875154"/>
+		<property name="smsRemainWarningMsg" value="警告：短信验证码余量不足%s条，尽快充值！【不木科技】"/>
+		<property name="smsRemainWarningCounts">
+			<list>
+				<value>2000</value>
+				<value>3000</value>
+				<value>4000</value>
+				<value>5000</value>
+			</list>
+		</property>
+		<property name="smsRemainWarningPhones">
+			<list>
+				<value>15190335443</value>
+				<value>13776012606</value>
+				<value>18626193204</value>
+			</list>
+		</property>
+	</bean>
+
+</beans>

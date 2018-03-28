@@ -1,0 +1,17 @@
+.is_red {
+	color: red;
+}
+
+.order_batch_extend_container .content .table_container table tbody tr.is_expire {
+	background-color: pink;
+}
+
+.order_batch_extend_container .content .table_container table tbody tr td div {
+	float: left;
+	width:100%;
+}
+
+.chosen-container-multi .chosen-results {
+	/*height: 150px;*/
+}
+

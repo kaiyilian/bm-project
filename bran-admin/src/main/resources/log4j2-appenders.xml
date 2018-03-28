@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Appenders>
+
+    <Console name="Console" target="SYSTEM_OUT">
+        <PatternLayout pattern="%d{HH:mm:ss} %5p %24.20c{1}:%4L - %m%n"/>
+    </Console>
+
+    <RollingFile name="server_log" fileName="${sys:catalina.home}/logs/${webapp_name}.log"
+                 filePattern="${sys:catalina.home}/logs/$${date:yyyy-MM}/${webapp_name}-%d{yyyy-MM-dd_HH}-%i.log">
+        <PatternLayout>
+            <Pattern>%d{HH:mm:ss} %5p %24.20c{1}:%4L [%8.8t] - %m%n</Pattern>
+        </PatternLayout>
+        <Policies>
+            <!--<TimeBasedTriggeringPolicy interval="1"/>-->
+            <CronTriggeringPolicy schedule="0 0 * * * ?"/>
+        </Policies>
+    </RollingFile>
+
+    <File name="db_log" fileName="${sys:catalina.home}/logs/${webapp_name}_db.log">
+        <PatternLayout>
+            <Pattern>%d{MM-dd HH:mm:ss} %5p %c{1}:%L - %m%n</Pattern>
+        </PatternLayout>
+    </File>
+
+    <RollingFile name="err_log" fileName="${sys:bumu.log.path.error}/${webapp_name}/${webapp_name}_err.log"
+                 filePattern="${sys:bumu.log.path.error}/${webapp_name}/$${date:yyyy-MM}/err-%d{yyyy-MM-dd}-%i.log">
+        <PatternLayout>
+            <Pattern>%d{HH:mm:ss} %5p %c{1}:%L [%8.8t] - %m%n</Pattern>
+        </PatternLayout>
+        <Policies>
+            <TimeBasedTriggeringPolicy interval="1"/>
+        </Policies>
+    </RollingFile>
+</Appenders>

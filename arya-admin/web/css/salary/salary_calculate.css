@@ -1,0 +1,231 @@
+table.dataTable thead th, table.dataTable thead td {
+    padding: 10px 10px;
+}
+
+.dataTable {
+    font-size: 1px;
+}
+
+.left_hint {
+    float: left;
+    margin-top: 10px;
+    font-weight: normal;
+}
+
+.datetimepicker, .datetimepicker-dropdown-bottom-right {
+    position: relative;
+    top: 0;
+    left: 200px;
+}
+
+.money_span {
+    margin-right: 0;
+    padding-right: 0;
+    float: right;
+}
+
+.be_override_obj td {
+    background-color: #d0d0d0;
+}
+
+.override_obj td {
+}
+
+.ignore_obj, .ignore_obj td {
+    background-color: #d0d0d0;
+}
+
+.annotation {
+    float: right;
+    display: inline;
+    margin-right: 40px;
+}
+
+.annotation_title {
+
+}
+
+.annotation_text {
+    /*font-style:italic*/
+}
+
+#operate_status {
+    width: 100%;
+    height: 500px;
+}
+
+.export {
+    margin-left: 10px;
+}
+
+.hide {
+    display: none;
+}
+
+/*#upload_form .row {*/
+/*margin-bottom: 10px;*/
+/*}*/
+
+/*#upload_form .row #settlement_interval {*/
+/*float: left;*/
+/*width: 50%;*/
+/*margin: 0;*/
+/*}*/
+
+/*#upload_form .row #date_picker {*/
+/*margin: 0;*/
+/*}*/
+#upload_form .row {
+    margin: 0;
+}
+
+#upload_form .item {
+    height: 34px;
+    padding-right: 10px;
+    padding-left: 0;
+    margin-bottom: 10px;
+    float: left;
+}
+
+#calculate_result_list thead th:first-child::after {
+    display: none;
+}
+
+.sm_font {
+    font-size: 8px;
+}
+
+.calc_rule_container .row .btn {
+    margin: 0;
+}
+
+.custom_calc_rule_container .btn_add_tax_rate {
+    margin-bottom: 10px !important;
+}
+
+/* 提示信息 颜色*/
+
+.new_obj {
+    color: green;
+}
+
+.wrong_obj {
+    color: red;
+}
+
+.conflict_obj {
+    color: #F00078;
+}
+
+.sys_generate_obj {
+    color: blue;
+}
+
+/* 薪资计算 container */
+
+.salary_calc_container {
+    margin: 5px 0;
+    background-color: #fff;
+    float: left;
+    width: 100%;
+}
+
+.salary_calc_container .head {
+    line-height: 46px;
+    padding: 0 12px;
+}
+
+.salary_calc_container .head .title {
+    font-weight: bold;
+    float: left;
+    font-size: 14px;
+}
+
+.salary_calc_container .content {
+    float: left;
+    width: 100%;
+}
+
+.salary_calc_container .content .table_container {
+    overflow-x: auto;
+}
+
+.salary_calc_container .content .table_container table {
+    text-align: center;
+}
+
+.salary_calc_container .content .pager_container ul {
+    margin: 12px 8px 8px;
+}
+
+.salary_calc_container .foot {
+    padding: 8px 12px;
+    float: left;
+    width: 100%;
+}
+
+.salary_calc_container .foot .choose_item {
+    line-height: 34px;
+    float: left;
+    margin: 0 15px;
+}
+
+.salary_calc_container .foot .btn_list .btn {
+    margin: 0;
+}
+
+/* 薪资统计 container */
+
+.salary_statistic_container {
+    margin: 5px 0;
+    background-color: #fff;
+    float: left;
+    width: 100%;
+}
+
+.salary_statistic_container .head {
+    line-height: 46px;
+    padding: 0 12px;
+}
+
+.salary_statistic_container .head .title {
+    font-weight: bold;
+    float: left;
+    font-size: 14px;
+}
+
+.salary_statistic_container .content {
+    float: left;
+    width: 100%;
+}
+
+.salary_statistic_container .content .table_container {
+    overflow-x: auto;
+}
+
+.salary_statistic_container .content .table_container table {
+    text-align: center;
+}
+
+.salary_statistic_container .content .pager_container ul {
+    margin: 12px 8px 8px;
+}
+
+.salary_statistic_container .foot {
+    padding: 8px 12px;
+    float: left;
+    width: 100%;
+}
+
+.salary_statistic_container .foot .btn_list .btn {
+    margin: 0;
+}
+
+/* 薪资规则 container */
+
+.salary_rule_container {
+    margin: 5px 0;
+    background-color: #fff;
+    float: left;
+    width: 100%;
+}

@@ -1,0 +1,31 @@
+
+.women_day_activity_container {
+
+  table#tb_women_day_activity {
+    //width: 2000px;
+
+    td {
+      padding: 0;
+    }
+    tbody tr td {
+
+      &.bless_content > div {
+        width: 200px;
+      }
+
+      & > div {
+        line-height: 40px;
+        margin: 0 auto;
+
+        img {
+          width: 100px;
+          margin: 10px 0;
+        }
+
+      }
+
+    }
+
+  }
+
+}

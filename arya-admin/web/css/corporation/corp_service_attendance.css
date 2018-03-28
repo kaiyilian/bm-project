@@ -1,0 +1,51 @@
+
+.corp_service_attendance_container {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.corp_service_attendance_container .corp_content .attendance_info_container {
+    position: relative;
+    padding: 20px 15px;
+    background-color: #fff;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.corp_service_attendance_container .attendance_info_container .row .txt {
+    line-height: 34px;
+    text-align: center;
+}
+
+.corp_service_attendance_container .attendance_info_container .btn_operate {
+    margin: 20px 0 0;
+}
+
+/* 考勤方式 */
+
+.corp_service_attendance_container .tab-content {
+    border: 1px solid #dddddd;
+    border-top: none;
+    padding: 20px 15px;
+}
+
+.corp_service_attendance_container .tab-content .is_enable {
+    margin: 0 0 15px 0;
+    line-height: 34px;
+    cursor: pointer;
+}
+
+.corp_service_attendance_container .tab-content .is_enable img {
+    margin: 10px;
+    float: left;
+}
+
+.corp_service_attendance_container #attendance_machine_method table tbody tr .deviceNo {
+    width: 50%;
+}
+
+.corp_service_attendance_container #attendance_machine_method table tbody tr .operate .btn {
+    margin-right: 12px;
+}
+

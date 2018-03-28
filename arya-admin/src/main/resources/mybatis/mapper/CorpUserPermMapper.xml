@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.bumu.arya.admin.corporation.model.dao.mybatis.CorpUserPermMybatisDao">
+
+
+    <select id="findCorpPermsWithCorpUser" resultType="com.bumu.arya.admin.corporation.result.CorpUserPermResult">
+
+        SELECT
+        T2.ID as id,
+        T2.PERM_DESC as permDesc,
+        T2.PERM_NAME as name,
+        T2.PERM_CODE as permissionCode,
+        IF(T1.selected = 1, 1, 0) AS selected
+        FROM (
+
+        SELECT
+        perm.ID,
+        perm.PERM_CODE,
+        perm.PERM_DESC,
+        perm.PERM_NAME,
+        1 AS selected
+        FROM BRAN_CORP_USER user
+        JOIN BRAN_CORP_USER_ROLE_RELATION user_role ON (user.ID = user_role.BRAN_CORP_USER_ID)
+        JOIN BRAN_ROLE role ON (user_role.BRAN_ROLE_ID = role.ID)
+        JOIN BRAN_ROLE_PERMISSION_RELATION role_perm ON (role.ID = role_perm.BRAN_ROLE_ID)
+        JOIN BRAN_PERMISSION perm ON (role_perm.BRAN_PERMISSION_ID = perm.ID)
+        <where>
+            <if test="branCorpUserId !=null and branCorpUserId != '' ">
+                and user.ID = #{branCorpUserId}
+            </if>
+            AND (IS_DEPRECATED = 0 OR IS_DEPRECATED IS NULL)
+            AND user.IS_DELETE = 0
+        </where>
+
+        ) T1
+
+        RIGHT JOIN
+
+        (SELECT
+        perm.ID,
+        perm.PERM_CODE,
+        perm.PERM_DESC,
+        perm.PERM_NAME,
+        0 AS selected
+        FROM BRAN_PERMISSION perm
+        WHERE (IS_DEPRECATED = 0 OR IS_DEPRECATED IS NULL)) T2
+        ON (T1.ID = T2.ID)
+        ORDER BY CONVERT( T2.ID,UNSIGNED INTEGER) ASC
+    </select>
+
+</mapper>

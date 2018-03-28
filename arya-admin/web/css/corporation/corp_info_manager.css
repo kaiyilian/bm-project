@@ -1,0 +1,74 @@
+
+.corp_info_container .aryaZtreeContainer .ztreeContainer {
+    height: calc(100% - 132px)
+}
+
+.bg_white {
+    background-color: #fff;
+}
+
+.corp_info_container {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.corp_or_dept_name h5 {
+    position: relative;
+    width: 100%;
+    line-height: 50px;
+    margin: 0;
+    font-size: 13px;
+}
+
+.corp_basic_info {
+    position: relative;
+    padding: 0;
+}
+
+.corp_basic_info .row {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.corp_basic_info .row .input-group[class*=col-] {
+    float: left;
+    padding: 0 15px;
+}
+
+.corp_basic_info .row.choose_container {
+    line-height: 34px;
+}
+
+.corp_basic_info .row.choose_container .item span {
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.corp_basic_info .btn_operate {
+    padding: 0 15px;
+}
+
+/* 部门 */
+
+.dept_info_container {
+    position: relative;
+    padding: 0;
+}
+
+.dept_info_container .row {
+    margin-bottom: 15px;
+}
+
+.dept_info_container .row .input-group[class*=col-] {
+    float: left;
+    padding: 0 15px;
+}
+
+.dept_info_container .row .btn {
+    margin-left: 10px;
+}
+
+.dept_info_add_modal .txt {
+    line-height: 34px;
+}

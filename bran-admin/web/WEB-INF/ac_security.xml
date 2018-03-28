@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+        <property name="securityManager" ref="securityManager"/>
+        <property name="loginUrl" value="/login"/>
+        <property name="unauthorizedUrl" value="/permission_fail"/>
+        <property name="filterChainDefinitions">
+            <value>
+                <!--员工管理-->
+                    <!--员工入职首页-->
+                    /admin/employee/prospective/**              authc, perms[employee:prospective:*]
+                    <!--花名册-->
+                    /admin/employee/roster/** =                 authc, perms[employee:roster:*]
+                    <!--离职员工-->
+                    /admin/employee/leave/** =                  authc, perms[employee:leave:*]
+                    <!--组织架构-->
+                    /admin/employee/structure/department/** =   authc, perms[employee:structure:*]
+                    <!--员工配置-->
+                    /admin/employee/setting/** =                authc, perms[employee:setting:*]
+
+                <!--员工管理-->
+                /admin/employee/** =                        authc, perms[employee:*]
+
+                <!--考勤管理-->
+                    <!--班次管理-->
+                    /admin/attendance/schedule/workShiftType/** =   authc, perms[attendance:workShiftType:*]
+                    <!--排班视图-->
+                    /admin/attendance/schedule/view/** =            authc, perms[attendance:schedule_view:*]
+                    <!--排班规律-->
+                    /admin/attendance/schedule/rule/** =            authc, perms[attendance:rule:*]
+                    <!--审批管理-->
+                    /admin/attendance/approval/** =                 authc, perms[attendance:approval:*]
+                    <!--出勤汇总-->
+                    /admin/attendance/summary/** =                  authc, perms[attendance:summary:*]
+                    <!--出勤汇总-->
+                    /admin/attendance/detail/** =                   authc, perms[attendance:detail:*]
+                    <!--出勤配置-->
+                    /admin/attendance/setting/** =                  authc, perms[attendance:setting:*]
+                <!--考勤管理-->
+                /admin/attendance/** =                      authc, perms[attendance:*]
+
+                <!--薪资管理-->
+                /admin/salary/** =                      authc, perms[salary:*]
+
+                <!--电子合同-->
+                /admin/e_contract/** =                  authc, perms[e_contract:*]
+
+                <!--== 企业管理 ==-->
+                /admin/corporation/info/** =            authc, perms[corp:info:*]
+                /admin/corporation/notification/** =    authc, perms[corp:notice:*]
+                /admin/corporation/** =                 authc, perms[corp::*]
+
+                <!--== 设置中心 ==-->
+                /admin/setting/log/** =                 authc, perms[setting:op_log:*]
+                /admin/setting/** =                     authc, perms[setting:*]
+
+                <!--== 权限管理 ==-->
+                /admin/permission/account/** =                  authc, perms[user:account:*]
+                /admin/permission/** =                  authc, perms[user:*]
+            </value>
+        </property>
+    </bean>
+
+    <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+        <!-- Single realm app.  If you have multiple realms, use the 'realms' property instead. -->
+        <property name="realm" ref="branSecurityRealm"/>
+        <!-- By default the servlet container sessions will be used.  Uncomment this line
+             to use shiro's native sessions (see the JavaDoc for more): -->
+        <!-- <property name="sessionMode" value="native"/> -->
+    </bean>
+    <bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/>
+
+    <!-- Define the Shiro Realm implementation you want to use to connect to your back-end -->
+    <!-- security datasource: -->
+    <bean id="branSecurityRealm" class="com.bumu.bran.admin.system.shiro.BranSecurityRealm"/>
+
+    <bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"
+          depends-on="lifecycleBeanPostProcessor"/>
+
+    <bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
+        <property name="securityManager" ref="securityManager"/>
+    </bean>
+
+
+</beans>

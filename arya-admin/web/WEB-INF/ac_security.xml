@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--系统-->
+    <bean id="p1001" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1001"/>
+        <property name="permissionCode" value="sys:user:*"/>
+        <property name="desc" value="系统用户管理"/>
+    </bean>
+    <bean id="p1002" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1002"/>
+        <property name="permissionCode" value="sys:role:*"/>
+        <property name="desc" value="系统角色管理"/>
+    </bean>
+    <bean id="p1003" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1003"/>
+        <property name="permissionCode" value="sys:setting:*"/>
+        <property name="desc" value="系统设置"/>
+    </bean>
+    <bean id="p1004" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1004"/>
+        <property name="permissionCode" value="sys:log:*"/>
+        <property name="desc" value="系统日志"/>
+    </bean>
+    <!--用户-->
+    <bean id="p1005" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1005"/>
+        <property name="permissionCode" value="user:manage:*"/>
+        <property name="desc" value="用户管理"/>
+    </bean>
+    <bean id="p1006" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1006"/>
+        <property name="permissionCode" value="user:import:*"/>
+        <property name="desc" value="用户批量导入"/>
+    </bean>
+    <bean id="p1007" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1007"/>
+        <property name="permissionCode" value="corp:base_info:*"/>
+        <property name="desc" value="组织机构基础信息维护"/>
+    </bean>
+    <!--社保-->
+    <bean id="p1008" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1008"/>
+        <property name="permissionCode" value="soin:base_info:*"/>
+        <property name="desc" value="社保基础信息维护"/>
+    </bean>
+    <bean id="p100801" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="100801"/>
+        <property name="permissionCode" value="soin:base_info:view"/>
+        <property name="desc" value="查看社保基础信息"/>
+    </bean>
+    <bean id="p100802" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="100802"/>
+        <property name="permissionCode" value="soin:base_info:modify"/>
+        <property name="desc" value="新建修改社保基础信息"/>
+    </bean>
+
+    <!--废弃-->
+    <!--<bean id="p100802" class="com.bumu.arya.admin.model.entity.PermissionEntity">-->
+    <!--<property name="id" value="100802"/>-->
+    <!--<property name="permissionCode" value="soin:base_info:district:*"/>-->
+    <!--<property name="desc" value="添加删除参保地区"/>-->
+    <!--</bean>-->
+    <!--<bean id="p100803" class="com.bumu.arya.admin.model.entity.PermissionEntity">-->
+    <!--<property name="id" value="100803"/>-->
+    <!--<property name="permissionCode" value="soin:base_info:type:*"/>-->
+    <!--<property name="desc" value="新增修改社保类型"/>-->
+    <!--</bean>-->
+    <!--<bean id="p100804" class="com.bumu.arya.admin.model.entity.PermissionEntity">-->
+    <!--<property name="id" value="100804"/>-->
+    <!--<property name="permissionCode" value="soin:base_info:type_version:*"/>-->
+    <!--<property name="desc" value="新增修改社保类型版本"/>-->
+    <!--</bean>-->
+
+    <bean id="p1009" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1009"/>
+        <property name="permissionCode" value="soin:person:*"/>
+        <property name="desc" value="参保人信息管理"/>
+    </bean>
+    <bean id="p1010" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1010"/>
+        <property name="permissionCode" value="soin:import:*"/>
+        <property name="desc" value="社保信息批量导入"/>
+    </bean>
+    <bean id="p1011" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1011"/>
+        <property name="permissionCode" value="soin:order:*"/>
+        <property name="desc" value="个人社保订单处理"/>
+    </bean>
+    <bean id="p1012" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1012"/>
+        <property name="permissionCode" value="soin:query:*"/>
+        <property name="desc" value="社保缴纳信息查询"/>
+    </bean>
+    <bean id="p1013" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1013"/>
+        <property name="permissionCode" value="soin:order_query:*"/>
+        <property name="desc" value="个人社保订单查询"/>
+    </bean>
+    <bean id="p1014" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1014"/>
+        <property name="permissionCode" value="soin:settle_accounts:*"/>
+        <property name="desc" value="费用结算"/>
+    </bean>
+
+    <!--薪资计算-->
+    <bean id="p1015" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1015"/>
+        <property name="permissionCode" value="salary:calculate:*"/>
+        <property name="desc" value="薪资计算"/>
+    </bean>
+    <bean id="p101501" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="101501"/>
+        <property name="permissionCode" value="salary:calculate:rule"/>
+        <property name="desc" value="配置薪资计算规则"/>
+    </bean>
+    <bean id="p101502" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="101502"/>
+        <property name="permissionCode" value="salary:calculate:delete"/>
+        <property name="desc" value="删除薪资计算数据"/>
+    </bean>
+    <bean id="p101503" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="101503"/>
+        <property name="permissionCode" value="salary:calculate:import"/>
+        <property name="desc" value="导入薪资并计算"/>
+    </bean>
+    <bean id="p101504" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="101504"/>
+        <property name="permissionCode" value="salary:calculate:export"/>
+        <property name="desc" value="导出薪资计算结果"/>
+    </bean>
+
+    <!--薪资计算系统2.0新增权限-->
+    <bean id = "p101505" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name = "id" value = "101505"/>
+        <property name="permissionCode" value="salary:project:*"/>
+        <property name="desc" value="立项申请管理（薪资2.0）"/>
+    </bean>
+
+    <bean id = "p101506" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name = "id" value = "101506"/>
+        <property name="permissionCode" value="salary:customer:*"/>
+        <property name="desc" value="薪资客户管理（薪资2.0）"/>
+    </bean>
+
+    <bean id = "p101507" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name = "id" value = "101507"/>
+        <property name="permissionCode" value="salary:rule:*"/>
+        <property name="desc" value="薪资规则设置（薪资2.0）"/>
+    </bean>
+
+    <bean id = "p101508" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name = "id" value = "101508"/>
+        <property name="permissionCode" value="salary:recharge:*"/>
+        <property name="desc" value="薪资客户充值（薪资2.0）"/>
+    </bean>
+
+    <bean id = "p101509" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name = "id" value = "101509"/>
+        <property name="permissionCode" value="customer:info:*"/>
+        <property name="desc" value="客户资料（薪资2.0）"/>
+    </bean>
+
+    <bean id = "p101601" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name = "id" value = "101601"/>
+        <property name="permissionCode" value="salary:calculate:base:*"/>
+        <property name="desc" value="薪资计算（薪资2.0）"/>
+    </bean>
+
+    <bean id = "p101602" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name = "id" value = "101602"/>
+        <property name="permissionCode" value="salary:delete:base:*"/>
+        <property name="desc" value="删除薪资计算（薪资2.0）"/>
+    </bean>
+    <bean id = "p101603" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name = "id" value = "101603"/>
+        <property name="permissionCode" value="salary:export:base:*"/>
+        <property name="desc" value="导出薪资计算（薪资2.0）"/>
+    </bean>
+    <bean id = "p101604" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name = "id" value = "101604"/>
+        <property name="permissionCode" value="salary:deduct:base:*"/>
+        <property name="desc" value="薪资确认扣款（薪资2.0）"/>
+    </bean>
+    <bean id = "p101605" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name = "id" value = "101605"/>
+        <property name="permissionCode" value="salary:bill:*"/>
+        <property name="desc" value="开票记录（薪资2.0）"/>
+    </bean>
+
+    <bean id="p1017" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1017"/>
+        <property name="permissionCode" value="operation:ads:*"/>
+        <property name="desc" value="广告管理"/>
+    </bean>
+
+    <bean id="p1018" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1018"/>
+        <property name="permissionCode" value="operation:news:*"/>
+        <property name="desc" value="新闻管理"/>
+    </bean>
+
+    <bean id="p1020" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1020"/>
+        <property name="permissionCode" value="soin:audit:*"/>
+        <property name="desc" value="社保对账管理"/>
+    </bean>
+
+    <bean id="p1021" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1021"/>
+        <property name="permissionCode" value="soin:audit:import"/>
+        <property name="desc" value="社保订单计算导入"/>
+    </bean>
+
+    <!--社保对账-->
+    <bean id="p1022" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1022"/>
+        <property name="permissionCode" value="soin:audit:export"/>
+        <property name="desc" value="社保对账"/>
+    </bean>
+    <bean id="p102201" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="102201"/>
+        <property name="permissionCode" value="soin:audit:export:cancel"/>
+        <property name="desc" value="社保对账-取消订单"/>
+    </bean>
+    <bean id="p102202" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="102202"/>
+        <property name="permissionCode" value="soin:audit:export:delete"/>
+        <property name="desc" value="社保对账-删除订单"/>
+    </bean>
+
+    <bean id="p1023" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1023"/>
+        <property name="permissionCode" value="soin:audit:batch"/>
+        <property name="desc" value="社保订单批次删除"/>
+    </bean>
+
+    <bean id="p1024" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1024"/>
+        <property name="permissionCode" value="soin:audit:supplier"/>
+        <property name="desc" value="供应商管理"/>
+    </bean>
+
+    <bean id="p1025" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1025"/>
+        <property name="permissionCode" value="soin:order:batch:extend"/>
+        <property name="desc" value="社保订单批量顺延"/>
+    </bean>
+
+    <bean id="p1026" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1026"/>
+        <property name="permissionCode" value="soin:person:increase_decrease"/>
+        <property name="desc" value="社保增减员导出"/>
+    </bean>
+
+    <!-- ==运营管理== -->
+
+    <!--福库-->
+    <bean id="p1030" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1030"/>
+        <property name="permissionCode" value="welfare.goods.*"/>
+        <property name="desc" value="福库商品管理"/>
+    </bean>
+
+    <bean id="p1031" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1031"/>
+        <property name="permissionCode" value="welfare.order.*"/>
+        <property name="desc" value="福库订单管理"/>
+    </bean>
+
+    <bean id="p1032" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1032"/>
+        <property name="permissionCode" value="welfare.notice.*"/>
+        <property name="desc" value="福库公告管理"/>
+    </bean>
+
+    <bean id="p1033" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1033"/>
+        <property name="permissionCode" value="welfare.coupon.*"/>
+        <property name="desc" value="福库券管理"/>
+    </bean>
+
+    <bean id="p1034" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1034"/>
+        <property name="permissionCode" value="sys:config:*"/>
+        <property name="desc" value="系统配置"/>
+    </bean>
+
+    <bean id="p1040" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1040"/>
+        <property name="permissionCode" value="tools:criminal:*"/>
+        <property name="desc" value="犯罪记录查询"/>
+    </bean>
+
+    <bean id="p1050" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1050"/>
+        <property name="permissionCode" value="corp:user:*"/>
+        <property name="desc" value="企业用户管理"/>
+    </bean>
+    <bean id="p1051" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1051"/>
+        <property name="permissionCode" value="corp:checkin:*"/>
+        <property name="desc" value="一键入职"/>
+    </bean>
+    <bean id="p1052" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1052"/>
+        <property name="permissionCode" value="corp:welfare:*"/>
+        <property name="desc" value="福库服务"/>
+    </bean>
+    <bean id="p1053" name="p1053" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1053"/>
+        <property name="permissionCode" value="corp:attendance:*"/>
+        <property name="desc" value="考勤服务"/>
+    </bean>
+    <bean id="p1054" name="p1054" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1054"/>
+        <property name="permissionCode" value="corp:econtract:*"/>
+        <property name="desc" value="电子合同服务"/>
+    </bean>
+
+    <bean id="p1060" name="p1060" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1060"/>
+        <property name="permissionCode" value="business:customer:*"/>
+        <property name="desc" value="客户商机"/>
+    </bean>
+    <bean id="p1061" name="p1061" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1061"/>
+        <property name="permissionCode" value="business:customer:salary"/>
+        <property name="desc" value="客户商机-薪酬"/>
+    </bean>
+    <bean id="p1062" name="p1062" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1062"/>
+        <property name="permissionCode" value="operation:red_packet:*"/>
+        <property name="desc" value="领红包记录"/>
+    </bean>
+    <bean id="p1063" name="p1063" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1063"/>
+        <property name="permissionCode" value="operation:enroll:*"/>
+        <property name="desc" value="活动报名"/>
+    </bean>
+
+    <bean id="p1070" name="p1070" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1070"/>
+        <property name="permissionCode" value="econtact:template:*"/>
+        <property name="desc" value="模板管理"/>
+    </bean>
+
+    <bean id="p1080" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1080"/>
+        <property name="permissionCode" value="payroll:manage:*"/>
+        <property name="desc" value="电子工资单管理"/>
+    </bean>
+
+    <bean id="p1081" name="p1081" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1081"/>
+        <property name="permissionCode" value="payroll:download"/>
+        <property name="desc" value="电子工资单下载"/>
+    </bean>
+
+    <bean id="p1091" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="1091"/>
+        <property name="permissionCode" value="devops:logs:*"/>
+        <property name="desc" value="程序日志下载"/>
+    </bean>
+
+    <bean id="p1092" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value = "1092"/>
+        <property name="permissionCode" value="user:wallet:*"/>
+        <property name="desc" value="钱包用户后台管理"/>
+    </bean>
+
+    <bean id="p0" class="com.bumu.arya.admin.model.entity.PermissionEntity">
+        <property name="id" value="0"/>
+        <property name="permissionCode" value="*"/>
+        <property name="desc" value="所有权限，不会出现在权限列表中"/>
+        <property name="subPermissions">
+            <set>
+                <ref bean="p1001"/>
+                <ref bean="p1002"/>
+                <ref bean="p1003"/>
+                <ref bean="p1004"/>
+                <ref bean="p1005"/>
+                <ref bean="p1006"/>
+                <ref bean="p1007"/>
+                <ref bean="p1008"/>
+                <ref bean="p100801"/>
+                <ref bean="p100802"/>
+                <ref bean="p1009"/>
+                <ref bean="p1010"/>
+                <ref bean="p1011"/>
+                <ref bean="p1012"/>
+                <ref bean="p1013"/>
+                <ref bean="p1014"/>
+                <ref bean="p1015"/>
+                <ref bean="p101501"/>
+                <ref bean="p101502"/>
+                <ref bean="p101503"/>
+                <ref bean="p101504"/>
+                <ref bean="p101505"/>
+                <ref bean="p101506"/>
+                <ref bean="p101507"/>
+                <ref bean="p101508"/>
+                <ref bean="p101509"/>
+                <ref bean="p101601"/>
+                <ref bean="p101602"/>
+                <ref bean="p101603"/>
+                <ref bean="p101604"/>
+                <ref bean="p101605"/>
+                <ref bean="p1017"/>
+                <ref bean="p1018"/>
+                <ref bean="p1020"/>
+                <ref bean="p1021"/>
+                <ref bean="p1022"/>
+                <ref bean="p102201"/>
+                <ref bean="p102202"/>
+                <ref bean="p1023"/>
+                <ref bean="p1024"/>
+                <ref bean="p1025"/>
+                <ref bean="p1026"/>
+                <ref bean="p1030"/>
+                <ref bean="p1031"/>
+                <ref bean="p1032"/>
+                <ref bean="p1033"/>
+                <ref bean="p1034"/>
+                <ref bean="p1040"/>
+                <ref bean="p1050"/>
+                <ref bean="p1051"/>
+                <ref bean="p1052"/>
+                <ref bean="p1053"/>
+                <ref bean="p1060"/>
+                <ref bean="p1061"/>
+                <ref bean="p1062"/>
+                <ref bean="p1063"/>
+                <ref bean="p1070"/>
+                <ref bean="p1080"/>
+                <ref bean="p1081"/>
+                <ref bean="p1054"/>
+                <ref bean="p1091"/>
+                <ref bean="p1092"/>
+            </set>
+        </property>
+    </bean>
+
+
+    <!--重复-->
+	<!--<bean id="p1041" class="com.bumu.arya.admin.model.entity.PermissionEntity">-->
+		<!--<property name="id" value="1041"/>-->
+		<!--<property name="permissionCode" value="user:manager:*"/>-->
+		<!--<property name="desc" value="App用户管理"/>-->
+	<!--</bean>-->
+
+	<bean id="aryaRoleInitializer" class="com.bumu.arya.admin.system.AryaSysRoleInitializer">
+		<property name="permissions">
+			<set>
+                <ref bean="p0"/>
+			</set>
+		</property>
+
+		<property name="roles">
+			<list>
+				<bean class="com.bumu.arya.admin.model.entity.RoleEntity">
+					<property name="id" value="1001"/>
+					<property name="roleName" value="admin"/>
+					<property name="roleDesc" value="系统管理员"/>
+					<property name="sysUsers">
+						<set>
+							<bean class="com.bumu.arya.admin.model.entity.SysUserEntity">
+								<property name="loginName" value="admin"/>
+								<property name="realName" value="Administrator"/>
+								<property name="loginPwd" value="admin"/>
+								<property name="isActive" value="1"/>
+								<property name="status" value="1"/>
+							</bean>
+						</set>
+					</property>
+					<property name="sysPermissions">
+						<set>
+                            <ref bean="p1001"/>
+                            <ref bean="p1002"/>
+                            <ref bean="p1003"/>
+                            <ref bean="p1004"/>
+                            <ref bean="p1005"/>
+                            <ref bean="p1006"/>
+                            <ref bean="p1007"/>
+                            <ref bean="p1008"/>
+                            <ref bean="p100801"/>
+                            <ref bean="p100802"/>
+                            <ref bean="p1009"/>
+                            <ref bean="p1010"/>
+                            <ref bean="p1011"/>
+                            <ref bean="p1012"/>
+                            <ref bean="p1013"/>
+                            <ref bean="p1014"/>
+                            <ref bean="p1015"/>
+                            <ref bean="p101501"/>
+                            <ref bean="p101502"/>
+                            <ref bean="p101503"/>
+                            <ref bean="p101504"/>
+                            <ref bean="p1017"/>
+                            <ref bean="p1018"/>
+                            <ref bean="p1020"/>
+                            <ref bean="p1021"/>
+                            <ref bean="p1022"/>
+                            <ref bean="p102201"/>
+                            <ref bean="p102202"/>
+                            <ref bean="p1023"/>
+                            <ref bean="p1024"/>
+                            <ref bean="p1030"/>
+                            <ref bean="p1031"/>
+                            <ref bean="p1032"/>
+                            <ref bean="p1033"/>
+                            <ref bean="p1034"/>
+                            <ref bean="p1040"/>
+                            <ref bean="p1050"/>
+                            <ref bean="p1051"/>
+                            <ref bean="p1052"/>
+                            <ref bean="p1053"/>
+                            <ref bean="p1080"/>
+						</set>
+					</property>
+				</bean>
+				<bean class="com.bumu.arya.admin.model.entity.RoleEntity">
+					<property name="id" value="1002"/>
+					<property name="roleName" value="manager"/>
+					<property name="roleDesc" value="管理"/>
+					<property name="sysPermissions">
+						<set>
+                            <ref bean="p1005"/>
+                            <ref bean="p1006"/>
+                            <ref bean="p1007"/>
+                            <ref bean="p1008"/>
+                            <ref bean="p1009"/>
+                            <ref bean="p1010"/>
+                            <ref bean="p1011"/>
+                            <ref bean="p1012"/>
+                            <ref bean="p1013"/>
+                            <ref bean="p1014"/>
+						</set>
+					</property>
+				</bean>
+				<!--<bean class="com.bumu.arya.admin.model.entity.RoleEntity">-->
+					<!--<property name="id" value="1003"/>-->
+					<!--<property name="roleName" value="operator"/>-->
+					<!--<property name="roleDesc" value="运营"/>-->
+					<!--<property name="sysPermissions">-->
+						<!--<set>-->
+							<!--<ref bean="p1005"/>-->
+							<!--<ref bean="p1006"/>-->
+							<!--<ref bean="p1007"/>-->
+						<!--</set>-->
+					<!--</property>-->
+				<!--</bean>-->
+
+				<bean class="com.bumu.arya.admin.model.entity.RoleEntity">
+					<property name="id" value="1004"/>
+					<property name="roleName" value="customer_service"/>
+					<property name="roleDesc" value="客服"/>
+					<property name="sysPermissions">
+						<set>
+							<ref bean="p1009"/>
+							<ref bean="p1010"/>
+							<ref bean="p1011"/>
+							<ref bean="p1012"/>
+							<ref bean="p1013"/>
+							<ref bean="p1014"/>
+							<ref bean="p1021"/>
+							<ref bean="p1022"/>
+							<ref bean="p102201"/>
+							<ref bean="p102202"/>
+							<ref bean="p1023"/>
+							<ref bean="p1024"/>
+						</set>
+					</property>
+				</bean>
+
+				<bean class="com.bumu.arya.admin.model.entity.RoleEntity">
+					<property name="id" value="1006"/>
+					<property name="roleName" value="soin_sales"/>
+					<property name="roleDesc" value="社保销售"/>
+					<property name="sysPermissions">
+						<set>
+							<ref bean="p100801"/>
+							<ref bean="p1021"/>
+							<ref bean="p1022"/>
+							<ref bean="p102201"/>
+							<ref bean="p102202"/>
+						</set>
+					</property>
+				</bean>
+
+				<bean class="com.bumu.arya.admin.model.entity.RoleEntity">
+					<property name="id" value="1007"/>
+					<property name="roleName" value="finance"/>
+					<property name="roleDesc" value="财务"/>
+					<property name="sysPermissions">
+						<set>
+							<ref bean="p1022"/>
+						</set>
+					</property>
+				</bean>
+
+			</list>
+		</property>
+	</bean>
+
+
+</beans>

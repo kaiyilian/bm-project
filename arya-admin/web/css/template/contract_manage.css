@@ -1,0 +1,156 @@
+/* 合同模板 */
+
+#contract_temp .table_container table tbody .item .operate div {
+    margin-right: 8px;
+}
+
+/* 合同模板 --- 弹框 */
+
+.contract_temp_info_modal .modal-body .line-height-34 {
+    padding: 0;
+}
+
+.contract_temp_info_modal .modal-body .table_container {
+    float: left;
+    width: 100%;
+    max-height: 188px;
+    overflow: auto;
+    margin-bottom: 10px;
+}
+
+.contract_temp_info_modal .modal-body .table_container table {
+    text-align: center;
+    margin: 0;
+}
+
+.contract_temp_info_modal .modal-body .table_container table tbody .item .loops_id {
+    width: 30%;
+}
+
+.contract_temp_info_modal .modal-body .table_container table tbody .item .loops_name {
+    width: 30%;
+}
+
+.contract_temp_info_modal .modal-body .table_container table tbody .item .loops_type {
+    width: 25%;
+}
+
+.contract_temp_info_modal .modal-body .temp_operate {
+}
+
+.contract_temp_info_modal .modal-body .temp_operate > div {
+    float: left;
+}
+
+.contract_temp_info_modal .modal-body .temp_operate .btn {
+    margin: 2px 5px 2px 0;
+}
+
+.contract_temp_info_modal .modal-body .temp_operate .btn_clear {
+    position: relative;
+    display: flex;
+    width: 40px;
+    height: 30px;
+    justify-content: center;
+    align-items: flex-end;
+    cursor: pointer;
+    color: #337ab7;
+    text-decoration: underline;
+}
+
+.contract_temp_info_modal .modal-body .temp_operate .txt {
+    position: relative;
+    color: #999;
+    font-size: 12px;
+    margin-left: 10px;
+    line-height: 34px;
+}
+
+/* 印章管理 */
+
+#seal_temp .seal_list_container {
+    width: 100%;
+    float: left;
+}
+
+/*#seal_temp .seal_list_container img {*/
+/*width: 100%;*/
+/*height: 100%;*/
+/*}*/
+
+#seal_temp .seal_list_container .msg {
+    position: relative;
+    line-height: 200px;
+    text-align: center;
+    font-size: 20px;
+}
+
+#seal_temp .seal_list_container .item {
+    margin-bottom: 20px;
+    height: 180px;
+}
+
+#seal_temp .seal_list_container .item .seal_img {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#seal_temp .seal_list_container .item .seal_img img {
+    width: 150px;
+    height: 150px;
+    /*margin: auto;*/
+    /*display: block;*/
+}
+
+#seal_temp .seal_list_container .item .seal_info {
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#seal_temp .seal_list_container .item .date {
+    font-size: 12px;
+    color: #999;
+}
+
+/* 印章管理 弹框 */
+
+.seal_temp_info_modal .modal-body .line-height-34 {
+    padding: 0;
+}
+
+.seal_temp_info_modal .modal-body .row .img_list > div {
+    padding-left: 0;
+}
+
+.seal_temp_info_modal .modal-body .row .img_list .thumbnail img {
+    width: 100%;
+    height: 80px;
+}
+
+.seal_temp_info_modal .modal-body .row .img_list .item {
+    position: relative;
+}
+
+.seal_temp_info_modal .modal-body .row .img_list .item .icon_del {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 24px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.seal_temp_info_modal .modal-body .row .img_list .item .icon_del img {
+    width: 100%;
+    height: 100%;
+}
+
+a.thumbnail.active, a.thumbnail:focus, a.thumbnail:hover {
+    border-color: #1ab394 !important;
+}

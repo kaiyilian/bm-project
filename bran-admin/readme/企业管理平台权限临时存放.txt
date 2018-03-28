@@ -1,0 +1,105 @@
+<!--== 员工管理 ==-->
+
+                <!--员工入职首页-->
+                <!--/admin/employee/prospective/list/index = authc, perms[employee:prospective:index:*]-->
+                <!--/admin/employee/prospective/manage/department/list = authc, perms[employee:prospective:index:*]-->
+                <!--/admin/employee/prospective/manage/work_line/list = authc, perms[employee:prospective:index:*]-->
+                <!--/admin/employee/prospective/manage/work_shift/list = authc, perms[employee:prospective:index:*]-->
+                <!--/admin/employee/prospective/manage/position/list = authc, perms[employee:prospective:index:*]-->
+                <!--/admin/employee/prospective/manage/list = authc, perms[employee:prospective:index:*]-->
+                <!--/admin/employee/prospective/manage/*/list = authc, perms[employee:prospective:index:*]-->
+                <!--/admin/employee/prospective/download = authc, perms[employee:prospective:index:*]-->
+
+                <!--&lt;!&ndash;待入职员工增删改查&ndash;&gt;-->
+                <!--/admin/employee/prospective/add/index = authc, perms[employee:prospective:index:*]-->
+                <!--/admin/employee/prospective/add/save = authc, perms[employee:prospective:save:*]-->
+                <!--/admin/employee/prospective/add/update = authc, perms[employee:prospective:save:*]-->
+                <!--/admin/employee/prospective/add/delete = authc, perms[employee:prospective:delete:*]-->
+                <!--&lt;!&ndash;导入待入职员工&ndash;&gt;-->
+                <!--/admin/employee/prospective/import/check = authc, perms[employee:prospective:check:*]-->
+                <!--/admin/employee/prospective/import/confirm = authc, perms[employee:prospective:confirm:*]-->
+
+
+                <!--/admin/employee/prospective/manage/detail/index = authc, perms[employee:prospective:detail:*]-->
+                <!--/admin/employee/prospective/manage/detail = authc, perms[employee:prospective:detail:*]-->
+                <!--/admin/employee/prospective/manage/work_sn/distribute = authc, perms[employee:prospective:accept:*]-->
+                <!--/admin/employee/prospective/manage/accept = authc, perms[employee:prospective:accept:*]-->
+                <!--/admin/employee/prospective/manage/export = authc, perms[employee:prospective:export:*]-->
+                <!--/admin/employee/prospective/manage/attachment/download = authc, perms[employee:prospective:attachment:*]-->
+
+                /admin/employee/prospective/** authc, perms[employee:prospective:*]
+
+                <!--员工花名册-->
+
+                <!--试用期受理-->
+                <!--/admin/employee/roster/manage/probation/process = authc, perms[employee:roster:disposal_probation:*]-->
+                <!--合同续约-->
+                <!--/admin/employee/roster/manage/contract/extension = authc, perms[employee:roster:extend_contract:*]-->
+                <!--考勤机花名册同步-->
+                <!--/admin/employee/work_attendance/put = authc, perms[employee:roster:sync:*]-->
+
+                <!--花名册首页-->
+
+                <!--/admin/workSnPrefix/get = authc, perms[employee:roster:index:*]-->
+
+                <!--花名册-->
+                <!--/admin/employee/roster/manage/** = authc, perms[employee:roster:index:*]-->
+                /admin/employee/setting/leave_reason/list = authc, perms[employee:roster:*]
+                /admin/employee/branCorp/list = authc, perms[employee:roster:*]
+                /admin/employee/roster/** = authc, perms[employee:roster:*]
+
+
+                <!--离职员工-->
+                /admin/employee/leave/** = authc, perms[employee:leave:*]
+
+                <!--组织架构-->
+                /admin/employee/structure/department/** =      authc, perms[employee:structure:*]
+
+                <!--员工配置-->
+                <!--/admin/employee/setting/general/** =         authc, perms[employee:setting:common:*]-->
+                <!--/admin/employee/setting/work_line/** =       authc, perms[employee:setting:line:*]-->
+                <!--/admin/employee/setting/work_shift/** =      authc, perms[employee:setting:shift:*]-->
+                <!--/admin/employee/setting/position/** =        authc, perms[employee:setting:position:*]-->
+                <!--/admin/employee/setting/leave_reason/** =    authc, perms[employee:setting:leave_reason:*]-->
+                <!--/admin/employee/setting/work_sn_prefix/** =  authc, perms[employee:setting:work_sn_prefix:*]-->
+                /admin/employee/setting/** =                 authc, perms[employee:setting:*]
+
+                /admin/employee/** =                 authc, perms[employee:*]
+
+                <!--考勤-->
+                <!--/admin/work_attendance/feedback/** = authc, perms[attendance:feedback:*]-->
+                /admin/work_attendance/setting/** = authc, perms[attendance:setting:*]
+                /admin/work_attendance/get/one/dayOrMonth/list = authc, perms[attendance:detail:*]
+                /admin/work_attendance/get/state = authc, perms[attendance:detail:*]
+                /admin/work_attendance/update/one = authc, perms[attendance:detail:*]
+                /admin/work_attendance/total/** = authc, perms[attendance:summary:*]
+                /admin/work_attendance/device/manager/** = authc, perms[attendance:device:*]
+                /admin/work_attendance/range = authc, perms[attendance:setting:range:*]
+                <!--审批-->
+                /admin/approval/** = authc, perms[attendance:approval:*]
+                <!--/admin/work_attendance/appealback = authc, perms[attendance:appeal:*]-->
+                <!--/admin/work_attendance/appeal = authc, perms[attendance:appeal:*]-->
+                /admin/work_attendance/** = authc, perms[attendance:*]
+
+
+                <!--== 薪资管理 ==-->
+                <!--/admin/salary/** =                  authc, perms[salary:payroll:*]-->
+                /admin/salary/** =                  authc, perms[salary:*]
+
+                <!--== 电子合同 ==-->
+                <!--/admin/e_contract/**/index =        authc, perms[e_contract:manage:*]-->
+                <!--/admin/e_contract/manager/** =      authc, perms[e_contract:manage:*]-->
+                /admin/e_contract/** =              authc, perms[e_contract:*]
+
+                <!--== 企业管理 ==-->
+                <!--/admin/corporation/handbook/** =    authc, perms[corp:info:handbook:*]-->
+                <!--/admin/corporation/bus/** =         authc, perms[corp:info:bus:*]-->
+                <!--/admin/corporation/info/** =        authc, perms[corp:info:*]-->
+                /admin/corporation/** =             authc, perms[corp::*]
+
+                <!--== 设置中心 ==-->
+                <!--/admin/log/** =                     authc, perms[setting:op_log:*]-->
+
+                <!--== 权限管理 ==-->
+                <!--/admin/corporation/permission/** =  authc, perms[user:account:*]-->
+                /admin/corporation/permission/** =  authc, perms[user:*]

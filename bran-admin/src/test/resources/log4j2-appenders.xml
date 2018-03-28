@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Appenders>
+
+    <Console name="Console" target="SYSTEM_OUT">
+        <PatternLayout pattern="%d{HH:mm:ss} %5p %24.20c{1}:%4L - %m%n"/>
+    </Console>
+
+    <RollingFile name="server_log" fileName="/${webapp_name}.log"
+                 filePattern="/$${date:yyyy-MM}/${webapp_name}-%d{yyyy-MM-dd_HH}-%i.log">
+        <PatternLayout>
+            <Pattern>%d{HH:mm:ss} %5p %24.20c{1}:%4L [%8.8t] - %m%n</Pattern>
+        </PatternLayout>
+        <Policies>
+            <!--<TimeBasedTriggeringPolicy interval="1"/>-->
+            <CronTriggeringPolicy schedule="0 0 * * * ?"/>
+        </Policies>
+    </RollingFile>
+
+    <File name="db_log" fileName="/${webapp_name}_db.log">
+        <PatternLayout>
+            <Pattern>%d{MM-dd HH:mm:ss} %5p %c{1}:%L - %m%n</Pattern>
+        </PatternLayout>
+    </File>
+
+    <RollingFile name="err_log" fileName="/${webapp_name}/${webapp_name}_err.log"
+                 filePattern="/${webapp_name}/$${date:yyyy-MM}/err-%d{yyyy-MM-dd}-%i.log">
+        <PatternLayout>
+            <Pattern>%d{HH:mm:ss} %5p %c{1}:%L [%8.8t] - %m%n</Pattern>
+        </PatternLayout>
+        <Policies>
+            <TimeBasedTriggeringPolicy interval="1"/>
+        </Policies>
+    </RollingFile>
+
+    <!--<NoSql name="mongo_appender">-->
+        <!--<MongoDb databaseName="arya_journal_dev"-->
+                 <!--collectionName="API_ACCESS_LOG"-->
+                 <!--server="192.168.13.248"-->
+                 <!--username="allen" password="123456"/>-->
+    <!--</NoSql>-->
+</Appenders>

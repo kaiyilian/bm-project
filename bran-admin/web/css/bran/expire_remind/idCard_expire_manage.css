@@ -1,0 +1,53 @@
+
+.idCard_validity_set_modal .modal-body .row {
+    position: relative;
+    width: 100%;
+    margin: 0 0 10px;
+    clear: both;
+}
+
+.idCard_validity_set_modal .modal-body .row .txt {
+    position: relative;
+    line-height: 34px;
+}
+
+.idCard_validity_set_modal .modal-body .row .txtInfo {
+    position: relative;
+    height: 34px;
+    line-height: 34px;
+}
+
+.idCard_validity_set_modal .modal-body .row .begin_time,
+.idCard_validity_set_modal .modal-body .row .end_time {
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    border-radius: 3px;
+    line-height: 32px;
+    padding: 0 10px;
+}
+
+.idCard_validity_set_modal .modal-body .row .laydate-icon {
+    position: absolute;
+    right: 15px;
+    top: 0;
+}
+
+.idCard_validity_set_modal .modal-body .row .laydate-icon.icon_end {
+    right: 0;
+}
+
+.idCard_validity_set_modal .modal-body .row .end_date_list {
+    padding: 0;
+    line-height: 30px;
+}
+
+.idCard_validity_set_modal .modal-body .row .end_date_list img {
+    width: 14px;
+    height: 14px;
+    float: left;
+    margin: 8px;
+}
+
+.idCard_validity_set_modal .modal-body .row .end_date_list > span {
+    cursor: pointer;
+}
+

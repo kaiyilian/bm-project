@@ -1,0 +1,5 @@
+.access_detail_container .content .url_statistic { position: relative; float: left; width: 100%; }
+.access_detail_container .content .url_statistic .name { position: relative; width: 100%; line-height: 40px; font-weight: bold; font-size: 18px; }
+.access_detail_container .content #tb_url_statistic tbody td.url > div { text-align: left; }
+
+/*# sourceMappingURL=access_detail.css.map */

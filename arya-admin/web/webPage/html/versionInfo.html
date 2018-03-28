@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>版本信息</title>
+
+    <!--bootstrap样式-->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+        .table {
+            position: relative;
+            width: 96%;
+            margin: 20px auto;
+        }
+
+        table tbody td.version_no {
+            width: 100px;
+        }
+
+        table tbody td span {
+            display: block;
+            width: 100%;
+            line-height: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<table class="table table-striped table-bordered table-hover dataTable">
+    <thead>
+    <tr>
+        <td>版本号</td>
+        <td>更新内容</td>
+    </tr>
+    </thead>
+    <tbody>
+	<tr>
+		<td class="version_no">v2.6</td>
+		<td>
+			<span>
+				<ol>
+					<li>
+						新增运维模块。包含：日志下载功能。
+					</li>
+					<li>
+						运营管理模块：活动报名列表查询、导出时增加活动类型字段。
+					</li>
+					<li>
+						企业信息管理模块：权限功能优化，企业列表显示不完全bug修改。
+					</li>
+					<li>
+						新闻列表分类名称修改。
+					</li>
+				</ol>
+			</span>
+		</td>
+	</tr>
+
+	<tr>
+		<td class="version_no">v2.5</td>
+		<td>
+			<span>
+				<ol>
+					<li>
+						系统日志改为使用MongoDB存储。
+						改进系统日志查询功能。
+					</li>
+				</ol>
+			</span>
+		</td>
+	</tr>
+
+	<tr>
+		<td class="version_no">v2.4</td>
+		<td>
+			<span>
+				<ol>
+					<li>
+						电子工资单模块优化。新增“使用次数”、“发薪人数”字段。
+						增加表头冻结、显示薪资详情功能。
+					</li>
+				</ol>
+			</span>
+		</td>
+	</tr>
+    <tr>
+        <td class="version_no">v2.3</td>
+        <td>
+			<span>
+				<ol>
+					<li>
+						增加电子合同模块。包含：合同模板（列表展示、新增、编辑）、
+						印章模板（列表展示、新增、编辑）
+					</li>
+					<li>
+						增加电子工资单模块。
+					</li>
+
+				</ol>
+			</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="version_no">v2.2</td>
+        <td>
+			<span>
+				<ol>
+					<li>
+							增加客户商机模块。
+					</li>
+					<li>
+							升级系统底层框架（Spring + Hibernate）。
+					</li>
+					<li>
+							修复定时任务的问题。
+					</li>
+				</ol>
+			</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="version_no">v2.1</td>
+        <td>
+			<span>
+				<ol>
+					<li>
+							重构企业信息管理模块，把各个业务模块的内容分拆出去。
+					</li>
+					<li>
+						增加考勤机打卡和手机打卡配置模块功能。
+					</li>
+				</ol>
+			</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="version_no">v2.0</td>
+        <td>
+			<span>
+				<ol>
+					<li>
+							社保管理模块增加批量顺延功能。
+					</li>
+					<li>
+							社保订单导入增加增减员处理，补缴处理等。
+					</li>
+					<li>
+							社保查询增加更多查询条件。
+					</li>
+					<li>
+							社保导出增加更多导出项；重构查询结果列表展示形式。
+					</li>
+					<li>
+							福库商品增加排序功能、库存、最大购买数和发货时间。
+					</li>
+					<li>
+							薪资计算模块增加标准薪资计算规则。
+					</li>
+					<li>
+							修复社保模块，福库模块，薪资模块的bug
+					</li>
+				</ol>
+			</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="version_no">v1.7</td>
+        <td>
+			<span>
+				<ol>
+						<li>
+								增加福库券制作功能模块，包括福库券定义增删改查，福库券生成导出。
+						</li>
+						<li>
+								福库订单管理模块增加福库券支付和线上支付金额；增加订单退款功能。
+						</li>
+						<li>
+								修改推送iOS消息为显示推送内容。
+						</li>
+						<li>
+								其他bug修复。
+						</li>
+				</ol>
+			</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="version_no">v1.6</td>
+        <td>
+			<span>
+				<ol>
+						<li>
+								社保基础信息管理模块增加补缴参数设置功能。
+						</li>
+						<li>
+								社保订单导入模版优化，增加参保地区、参保类型等下拉选择。
+						</li>
+						<li>
+								优化社保订单导入时的错误信息提示。
+						</li>
+						<li>
+								其他bug修复。
+						</li>
+				</ol>
+			</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="version_no">v1.5</td>
+        <td>
+			<span>
+				<ol>
+						<li>
+								社保基础信息管理页面重构，增加了 导出功能。
+						</li>
+						<li>
+								app用户管理 查询功能优化。
+						</li>
+						<li>
+								福库订单管理 新增导出货物通知单。
+						</li>
+						<li>
+								薪资管理bug修复。
+						</li>
+						<li>
+								信息管理页面 新增"是否是 汇思项目"选项。
+						</li>
+						<li>
+								修改了一些bug和优化了UI显示。
+						</li>
+				</ol>
+			</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="version_no">v1.4</td>
+        <td>
+			<span>
+				<ol>
+					<li>
+						新增了App用户查询子模块。
+					</li>
+					<li>
+						新增了系统日志查询子模块。
+					</li>
+					<li>
+						重新设计了企业信息管理模块的UI。
+					</li>
+					<li>
+						社保对账导出模块增加了批量修改订单缴纳状态和原因的功能。
+					</li>
+					<li>
+						社保订单导入模块增加了导入后直接导出对账单功能。
+					</li>
+					<li>
+						个人订单管理模块增加按照参保人信息查询订单功能。
+					</li>
+					<li>
+						修改了一些bug和优化了UI显示。
+					</li>
+				</ol>
+			</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="version_no">v1.3</td>
+        <td>
+			<span>
+				<ol>
+					<li>
+						新增了福库商品管理子模块
+					</li>
+					<li>
+						新增了福库订单管理子模块
+					</li>
+					<li>
+						新增了福库公告管理子模块
+					</li>
+				</ol>
+			</span>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="version_no">v1.2</td>
+        <td>
+			<span>
+				<ol>
+					<li>
+						新增了社保订单导入子模块
+					</li>
+					<li>
+						新增了订单对账导出子模块
+					</li>
+					<li>
+						新增了订单批次删除子模块
+					</li>
+					<li>
+						新增了供应商管理子模块
+					</li>
+				</ol></span>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="version_no">v1.1.1</td>
+        <td>
+			<span>
+				<ol>
+				<li>
+					重构了企业管理功能，适应入职、薪资待发等功能的需要。
+				</li>
+				<li>
+					修改了入职企业用户管理功能。<br/>
+				</li>
+				</ol>
+			</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="version_no">v1.1</td>
+        <td>
+			<span>
+				<ol>
+					<li>增加了薪资计算导入的模块。</li>
+				</ol>
+			</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="version_no">v1.0</td>
+        <td>
+			<span>
+				<ol>
+					<li>
+						初始版本，包含线上社保相关的管理功能、运营广告管理、系统用户角色权限管理等功能
+					</li>
+				</ol>
+			</span>
+        </td>
+    </tr>
+
+    </tbody>
+</table>
+
+</body>
+</html>

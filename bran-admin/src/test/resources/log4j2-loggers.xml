@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Loggers>
+    <!--<Logger name="api_ac_log" level="INFO">-->
+    <!--<AppenderRef ref="mongo_appender"/>-->
+    <!--</Logger>-->
+    <!--<Logger name="com.bumu" level="${sys:bumu.log.level}">-->
+    <!--<AppenderRef ref="Console"/>-->
+    <!--<AppenderRef ref="server_log"/>-->
+    <!--</Logger>-->
+    <Root level="info">
+        <AppenderRef ref="STDOUT"/>
+    </Root>
+    <Logger name="com.bumu" level="info">
+        <AppenderRef ref="Console"/>
+        <AppenderRef ref="server_log"/>
+    </Logger>
+    <Logger name="com.bumu.exception.ExceptionLogger" level="error">
+        <AppenderRef ref="Console"/>
+        <AppenderRef ref="err_log"/>
+    </Logger>
+    <Logger name="java.sql" level="info">
+        <AppenderRef ref="Console"/>
+    </Logger>
+    <Logger name="org.apache.http" level="info">
+        <AppenderRef ref="Console"/>
+    </Logger>
+    <Logger name="org.apache.commons.configuration" level="warn">
+        <AppenderRef ref="Console"/>
+    </Logger>
+    <Logger name="org.apache.commons.beanutils" level="info">
+        <AppenderRef ref="Console"/>
+    </Logger>
+    <Logger name="org.apache.commons.digester" level="info">
+        <AppenderRef ref="Console"/>
+    </Logger>
+    <Logger name="org.apache.activemq" level="info">
+        <AppenderRef ref="Console"/>
+    </Logger>
+    <Logger name="org.springframework" level="info">
+        <AppenderRef ref="Console"/>
+    </Logger>
+    <Logger name="com.fasterxml.jackson" level="info">
+        <AppenderRef ref="Console"/>
+    </Logger>
+    <Logger name="org.swiftdao" level="info">
+        <AppenderRef ref="Console"/>
+    </Logger>
+    <Logger name="org.hibernate" level="info">
+        <AppenderRef ref="Console"/>
+    </Logger>
+    <!--打印sql-->
+    <Logger name="org.hibernate.type.descriptor.sql.BasicBinder" level="TRACE">
+        <AppenderRef ref="Console"/>
+        <AppenderRef ref="db_log"/>
+    </Logger>
+
+    <Logger name="org.apache.ibatis" level="info">
+        <AppenderRef ref="Console"/>
+    </Logger>
+    <Logger name="org.mybatis" level="info">
+        <AppenderRef ref="Console"/>
+    </Logger>
+
+    <Logger name="org.aspectj" level="info">
+        <AppenderRef ref="Console"/>
+    </Logger>
+    <Logger name="org.h2" level="info">
+        <AppenderRef ref="Console"/>
+    </Logger>
+    <Logger name="org.jasypt" level="info">
+        <AppenderRef ref="Console"/>
+    </Logger>
+    <Logger name="org.apache.shiro" level="info">
+        <AppenderRef ref="Console"/>
+    </Logger>
+    <Logger name="org.jboss.logging" level="info">
+        <AppenderRef ref="Console"/>
+    </Logger>
+    <Logger name="net.sf.ehcache" level="info">
+        <AppenderRef ref="Console"/>
+    </Logger>
+    <Logger name="com.mchange.v2" level="info">
+        <AppenderRef ref="Console"/>
+    </Logger>
+    <Logger name="com.mchange.v1" level="info">
+        <AppenderRef ref="Console"/>
+    </Logger>
+    <Logger name="org.quartz" level="info">
+        <AppenderRef ref="Console"/>
+    </Logger>
+    <Logger name="net.sf.jxls" level="info">
+        <AppenderRef ref="Console"/>
+    </Logger>
+    <Logger name="org.apache.commons.jexl2" level="info">
+        <AppenderRef ref="Console"/>
+    </Logger>
+    <Logger name="org.springframework.data.mongodb" level="info">
+        <AppenderRef ref="Console"/>
+    </Logger>
+    <Logger name="org.springframework.validation" level="info" additivity="false">
+        <AppenderRef ref="Console"/>
+    </Logger>
+    <Logger name="org.springframework.web" level="info" additivity="false">
+        <AppenderRef ref="Console"/>
+    </Logger>
+    <Logger name="org.springframework.http" level="info" additivity="false">
+        <AppenderRef ref="Console"/>
+    </Logger>
+    <Logger name="org.apache.axis2" level="info">
+        <AppenderRef ref="Console"/>
+    </Logger>
+    <Logger name="org.apache.axiom" level="info">
+        <AppenderRef ref="Console"/>
+    </Logger>
+    <Logger name="org.apache.commons" level="info">
+        <AppenderRef ref="Console"/>
+    </Logger>
+    <Logger name="org.mongodb" level="info">
+        <AppenderRef ref="Console"/>
+    </Logger>
+
+    <Logger name="com.bumu.bran.employee.model.dao.mybatis" level="debug">
+        <AppenderRef ref="Console"/>
+    </Logger>
+
+</Loggers>

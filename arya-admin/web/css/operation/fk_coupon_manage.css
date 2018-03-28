@@ -1,0 +1,70 @@
+
+.container .content .table_container table tbody tr.exported td{
+	background-color: #ffbbbb!important;
+}
+
+.container .content .table_container table td.coupon_img img {
+	width: 40px;
+	height: 40px;
+}
+
+.container .content .table_container table td.operate {
+	width: 120px;
+}
+
+.container .content .table_container table td.operate .btn:not(:first-child) {
+	margin-left: 8px;
+}
+
+.container .content .table_container table .choose_item img,
+.container .foot .choose_item img {
+	cursor: pointer;
+}
+
+/* 福库券 信息 弹框 */
+
+.coupon_info_modal .modal-body .row {
+	margin-bottom: 10px;
+}
+
+.coupon_info_modal .modal-body .row .col-xs-2 {
+	line-height: 34px;
+}
+
+.coupon_info_modal .modal-body .row .img_thumb {
+	position: relative;
+	width: 80%;
+	margin: auto;
+	padding: 0;
+	height: 150px;
+}
+
+.coupon_info_modal .modal-body .row .img_thumb .coupon_bg {
+	width: 100%;
+	height: 100%;
+}
+
+.coupon_info_modal .modal-body .row .img_thumb .qrCode_img {
+	position: absolute;
+	left: 30px;
+	top: 100px;
+	width: 50px;
+	height: 50px;
+}
+
+.coupon_info_modal .modal-body .row .btn_timeSet {
+	margin: 0 15px 10px;
+}
+
+.coupon_info_modal .modal-body .row .btn_timeSet.active {
+	background-color: #337ab7;
+}
+
+/* chosen select 查询框 */
+.fk_coupon_manage_container .chosen-container-multi .chosen-choices {
+	border: 0;
+}
+
+.fk_coupon_manage_container .input-group .form-control {
+	z-index: inherit;
+}

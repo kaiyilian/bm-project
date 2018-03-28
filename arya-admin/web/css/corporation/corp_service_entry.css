@@ -1,0 +1,89 @@
+
+.corp_service_entry_container {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.corp_service_entry_container .corp_container_form {
+    position: relative;
+    background-color: #fff;
+    padding: 20px 15px;
+}
+
+.corp_service_entry_container .corp_container_form img {
+    width: 100%;
+    height: 100%;
+}
+
+.corp_service_entry_container .corp_container_form .row {
+    position: relative;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.corp_service_entry_container .corp_container_form .row .input-group[class*=col-] {
+    float: left;
+    padding: 0 15px;
+}
+
+.corp_service_entry_container .corp_container_form .row .corp_address_container {
+    position: relative;
+}
+
+.corp_service_entry_container .corp_container_form .row .corp_district_list {
+    position: absolute;
+    top: 34px;
+    left: 30%;
+    width: 180px;
+    min-height: 50px;
+    max-height: 200px;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.2);
+    overflow: auto;
+}
+
+.corp_service_entry_container .corp_container_form .row .corp_district_list a {
+    position: relative;
+    width: 100%;
+    line-height: 25px;
+    display: block;
+}
+
+.corp_service_entry_container .corp_container_form .row .img_upload_container .txt {
+    padding: 0;
+    line-height: 100px;
+}
+
+.corp_service_entry_container .corp_container_form .row .img_upload_container .img_upload_lbl {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    background-color: #eeeeee;
+    text-align: center;
+    line-height: 100px;
+    display: block;
+    /*float: left;*/
+    /*cursor: pointer;*/
+    margin: 0;
+    font-weight: 100;
+    /*font-size: 12px;*/
+}
+
+.corp_service_entry_container .corp_container_form .btn_operate {
+    margin: 20px 0 0;
+}
+
+/*.corp_service_entry_container .corp_container_form .row .img_upload_container .img_upload_spn {*/
+/*position: relative;*/
+/*width: 100px;*/
+/*height: 100px;*/
+/*border-radius: 5px;*/
+/*background-color: #eeeeee;*/
+/*text-align: center;*/
+/*line-height: 100px;*/
+/*!*display: none;*!*/
+/*float: left;*/
+/*}*/
+

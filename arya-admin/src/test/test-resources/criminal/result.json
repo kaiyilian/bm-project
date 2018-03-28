@@ -1,0 +1,25 @@
+{
+  "body": {
+    "orderNumber": "CN11489129883556210635",
+    "data": [
+      {
+        "transactionType": 150,
+        "entity": {
+          "id": 638,
+          "orderId": 1755,
+          "resCode": 0,
+          "resMsg": "查询无记录",
+          "caseTime": null,
+          "des": null,
+          "createBy": null,
+          "createTime": 1489129883815,
+          "updateBy": null,
+          "updateTime": 1489129883815
+        }
+      }
+    ],
+    "paymentTradeNo": "6d439afa9ff74d0a873315c6aea6b598",
+    "orderId": 1755
+  },
+  "responseCode": 200
+}

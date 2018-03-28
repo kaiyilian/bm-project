@@ -1,0 +1,24 @@
+.emp_setting_container .content > .nav[role='tablist'] { margin: 8px; }
+.emp_setting_container .content > .tab-content { padding: 8px; float: left; width: 100%; }
+.emp_setting_container .content > .tab-content div[role='tabpanel'] .row { padding-left: 8px; }
+.emp_setting_container .content > .tab-content div[role='tabpanel'] .row > .txt { float: left; margin-right: 8px; }
+.emp_setting_container .content > .tab-content div[role='tabpanel'] .table_container { border: none; }
+.emp_setting_container .content > .tab-content div[role='tabpanel'] .table_container table tbody .name div { width: 600px; margin: 0 auto; }
+.emp_setting_container .content > .tab-content div[role='tabpanel'][id='message'] { height: 170px; background-color: #fff; padding: 10px 0; }
+.emp_setting_container .content > .tab-content div[role='tabpanel'][id='message'] .row div .entry_prompt_info { position: relative; padding: 10px 12px; outline: 0; border-radius: 2px; min-height: 100px; border: 1px solid #e5e6e7; background-color: #fff; line-height: 75px; }
+.emp_setting_container .content > .tab-content div[role='tabpanel'][id='message'] .row div .btn_submit { margin-top: 32px; }
+.emp_setting_container .content > .tab-content div[role='tabpanel'][id='message'] .row div .row { margin: 10px 0 0 !important; }
+.emp_setting_container .content > .tab-content div[role='tabpanel'][id='message'] .row div .row > div { float: left; margin-right: 8px; }
+.emp_setting_container .content > .tab-content div[role='tabpanel'][id='message'] .row div .row > div img { width: 14px; height: 14px; margin: 12px 0; cursor: pointer; }
+.emp_setting_container .content > .tab-content div[role='tabpanel'][id='message'] .row div .row .time_container { height: 20px; margin-top: 10px; }
+
+.modal .modal-body .row { margin: 0 !important; }
+.modal .modal-body .row > .txt { line-height: 34px; text-align: center; }
+.modal .modal-body .row .prompt { padding-left: 20px; }
+.modal .modal-body .row .prompt .is_bad_container { line-height: 26px; }
+.modal .modal-body .row .prompt .is_bad_container .choose_item { width: 14px; height: 14px; margin: 5px 3px; }
+.modal .modal-body .row .prompt .is_bad_container:hover { color: #1c84c6; cursor: pointer; }
+
+.work_sn_prefix_modal .modal-body > .row, .roster_custom_modal .modal-body > .row { margin-bottom: 10px !important; }
+
+.is_bad, .clr_red { color: red; }

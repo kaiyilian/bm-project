@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.bumu</groupId>
+    <artifactId>bran-admin</artifactId>
+    <packaging>war</packaging>
+    <version>1.1-SNAPSHOT</version>
+
+    <parent>
+        <groupId>com.bumu</groupId>
+        <artifactId>arya</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../integrate/pom.xml</relativePath>
+    </parent>
+
+    <build>
+        <finalName>bran-admin</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <forceJavacCompilerUse/>
+                </configuration>
+            </plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-clean-plugin</artifactId>
+				<version>2.5</version>
+			</plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.5</version>
+                <configuration>
+                    <webXml>web/WEB-INF/web.xml</webXml>
+                    <resourceEncoding>UTF-8</resourceEncoding>
+                    <webResources>
+                        <resource>
+                            <directory>web</directory>
+                        </resource>
+                    </webResources>
+                </configuration>
+            </plugin>
+
+			<plugin>
+				<groupId>com.github.kongchen</groupId>
+				<artifactId>swagger-maven-plugin</artifactId>
+				<version>3.1.6-SNAPSHOT</version>
+				<configuration>
+					<apiSources>
+						<apiSource>
+							<springmvc>true</springmvc>
+							<!--<locations>com.bumu.bran</locations>-->
+							<locations>
+								<location>com.bumu.bran</location>
+							</locations>
+							<schemes>
+								<schema>http</schema>
+							</schemes>
+							<!--<host>192.168.13.248:8443</host>-->
+                            <host>${env.SWAGGER_HOST_BRAN_ADMIN}</host>
+							<basePath>/bran-admin</basePath>
+							<info>
+								<title>不木招才进宝-企业管理平台-API文档</title>
+								<version>V1.x</version>
+								<description>BRAN-ADMIN</description>
+							</info>
+							<!--<templatePath>${basedir}/src/main/swagger/template/strapdown.html.hbs</templatePath>-->
+							<!--<outputPath>${basedir}/src/main/swagger/api-doc.html</outputPath>-->
+							<swaggerDirectory>${env.SWAGGER_UI_WEB_DIR}/bran-admin</swaggerDirectory>
+							<securityDefinitions>
+								<securityDefinition>
+									<name>MybasicAuth</name>
+									<type>basic</type>
+								</securityDefinition>
+							</securityDefinitions>
+						</apiSource>
+					</apiSources>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>compile</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+
+        <!--模块引用-->
+		<dependency>
+			<groupId>com.bumu</groupId>
+			<artifactId>bran-common</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+
+        <dependency>
+            <groupId>com.bumu</groupId>
+            <artifactId>common</artifactId>
+            <version>1.2-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!--第三方库引用-->
+        <dependency>
+            <groupId>com.mchange</groupId>
+            <artifactId>c3p0</artifactId>
+            <version>0.9.5.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>1.8.9</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.8.9</version>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.38</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>jsp-api</artifactId>
+            <version>2.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.taglibs</groupId>
+            <artifactId>taglibs-standard-jstlel</artifactId>
+            <version>1.2.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>1.3.1</version>
+        </dependency>
+
+        <!--POI-->
+
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-scratchpad</artifactId>
+            <version>3.9</version>
+        </dependency>
+
+        <dependency>
+            <groupId>xml-apis</groupId>
+            <artifactId>xml-apis</artifactId>
+            <version>1.3.04</version>
+        </dependency>
+
+        <!--验证码-->
+        <dependency>
+            <groupId>org.apache.tapestry</groupId>
+            <artifactId>tapestry-kaptcha</artifactId>
+            <version>5.4.1</version>
+        </dependency>
+
+        <!--TEST-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>1.5.4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.25</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>log4j</groupId>
+                    <artifactId>log4j</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-nosql</artifactId>
+            <version>${log4j2.version}</version>
+        </dependency>
+
+        <!--<dependency>-->
+            <!--<groupId>log4jwebtracker</groupId>-->
+            <!--<artifactId>log4jwebtracker</artifactId>-->
+            <!--<version>1.0.2</version>-->
+            <!--<systemPath>${project.basedir}/web/WEB-INF/lib/log4jwebtracker-1.0.2.jar</systemPath>-->
+        <!--</dependency>-->
+
+		<!--<dependency>-->
+			<!--<groupId>io.swagger</groupId>-->
+			<!--<artifactId>swagger-core</artifactId>-->
+			<!--<version>1.5.12</version>-->
+			<!--<exclusions>-->
+				<!--<exclusion>-->
+					<!--<groupId>javax.ws.rs</groupId>-->
+					<!--<artifactId>jsr311-api</artifactId>-->
+				<!--</exclusion>-->
+			<!--</exclusions>-->
+		<!--</dependency>-->
+
+		<!--<dependency>-->
+			<!--<groupId>io.swagger</groupId>-->
+			<!--<artifactId>swagger-annotations</artifactId>-->
+			<!--<version>1.5.12</version>-->
+		<!--</dependency>-->
+
+       <!--
+       使用httpunit爬虫爬取网页
+       <dependency>
+            <groupId>org.httpunit</groupId>
+            <artifactId>httpunit</artifactId>
+            <version>1.7.2</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>rhino</groupId>
+            <artifactId>js</artifactId>
+            <version>1.7R2</version>
+        </dependency>
+-->
+
+    </dependencies>
+
+
+</project>

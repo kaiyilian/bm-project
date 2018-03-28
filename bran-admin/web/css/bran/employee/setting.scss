@@ -1,0 +1,159 @@
+$red: red;
+
+.emp_setting_container {
+
+  .content {
+
+    & > .nav[role='tablist'] {
+      margin: 8px;
+    }
+
+    & > .tab-content {
+      padding: 8px;
+      float: left;
+      width: 100%;
+
+      & div[role='tabpanel'] {
+
+        .row {
+          //margin: 0 !important;
+          padding-left: 8px;
+
+          & > .txt {
+            float: left;
+            margin-right: 8px;
+          }
+
+          .btn_add {
+            //margin-left: 5px;
+          }
+
+        }
+
+        .table_container {
+          border: none;
+
+          table tbody .name div {
+            width: 600px;
+            margin: 0 auto;
+          }
+        }
+
+        &[id='message'] {
+
+          height: 170px;
+          background-color: #fff;
+          padding: 10px 0;
+
+          .row {
+
+            div {
+
+              .entry_prompt_info {
+                position: relative;
+                padding: 10px 12px;
+                outline: 0;
+                border-radius: 2px;
+                min-height: 100px;
+                border: 1px solid #e5e6e7;
+                background-color: #fff;
+                line-height: 75px;
+              }
+
+              .btn_submit {
+                margin-top: 32px;
+              }
+
+              .row {
+                margin: 10px 0 0 !important;
+
+                & > div {
+                  float: left;
+                  margin-right: 8px;
+
+                  img {
+                    width: 14px;
+                    height: 14px;
+                    margin: 12px 0;
+                    cursor: pointer;
+                  }
+
+                }
+
+                .time_container {
+                  height: 20px;
+                  margin-top: 10px;
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+.modal .modal-body {
+  .row {
+    margin: 0 !important;
+
+    & > .txt {
+      line-height: 34px;
+      text-align: center;
+    }
+
+    .prompt {
+      padding-left: 20px;
+
+      .is_bad_container {
+        //margin: 0 !important;
+        line-height: 26px;
+
+        //.icon.icon-prompt {
+        //  position: relative;
+        //  width: 14px;
+        //  height: 16px;
+        //  background: url("../../../image/icon_jurisdiction/icon_prompt.png") no-repeat;
+        //  background-size: contain;
+        //  display: block;
+        //  margin: 4px 2px;
+        //  float: left;
+        //}
+
+        .choose_item {
+          width: 14px;
+          height: 14px;
+          margin: 5px 3px;
+        }
+      }
+
+      .is_bad_container:hover {
+        color: #1c84c6;
+        cursor: pointer;
+      }
+
+    }
+
+  }
+}
+
+.work_sn_prefix_modal, .roster_custom_modal {
+
+  .modal-body {
+    & > .row {
+      margin-bottom: 10px !important;
+    }
+  }
+}
+
+.is_bad, .clr_red {
+  color: $red;
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.bumu.arya.admin.operation.model.dao.mybatis.WalletCntMybatisDao">
+
+    <select id="walletUserCntList" resultType="com.bumu.arya.admin.operation.result.WalletUserCntResult">
+        SELECT
+            au.PHONE_NO AS appPhone,
+            wu.PHONE AS phone,
+            wu.WALLET_USER_ID AS walletUserId,
+            wu.VALID_USER_NAME AS validUserName,
+            wu.VALID_CARD_NO AS validCardNo,
+            tmp.bankCardNum AS bankCardNum
+        FROM
+            WALLET_USER wu
+        INNER JOIN ARYA_USER au ON wu.user_id = au.id
+        LEFT JOIN (
+            SELECT
+                wu.USER_ID,
+                count(wbc.id) AS bankCardNum
+            FROM
+                WALLET_USER wu
+            INNER JOIN WALLET_BANK_CARD wbc ON wu.user_id = wbc.USER_ID
+            WHERE
+                wbc.IS_DELETE = 0
+            AND wbc.BIND_SUCCESS = 1
+            AND wbc.AUTH_CODE IS NOT NULL
+            GROUP BY
+                wu.USER_ID
+        ) tmp ON tmp.USER_ID = wu.USER_ID
+        <where>
+            <if test="null != _parameter and '' != _parameter">
+                and (wu.VALID_CARD_NO = #{_parameter}
+                or au.PHONE_NO = #{_parameter}
+                or wu.VALID_USER_NAME = #{_parameter}
+                or wu.WALLET_USER_ID = #{_parameter})
+            </if>
+
+        </where>
+
+
+    </select>
+</mapper>

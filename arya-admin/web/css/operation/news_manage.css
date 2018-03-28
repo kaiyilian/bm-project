@@ -1,0 +1,65 @@
+body {
+    background-color: #f3f3f4;
+}
+
+.border-top {
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.news_manage_container {
+    position: relative;
+    padding: 10px 15px;
+    /*position: relative;*/
+    /*width: 96%;*/
+    /*margin: 30px 2% 10px;*/
+    /*padding: 0;*/
+    line-height: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    clear: both;
+}
+
+
+.news_manage_container .tab-content {
+}
+
+.news_manage_container .tab-content .tab-pane {
+    padding: 15px 0;
+}
+
+.news_manage_container .tab-content .tab-pane .row {
+    margin: 0 !important;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 12px;
+}
+
+.news_manage_container .tab-content .tab-pane table tbody td > div {
+    line-height: 34px;
+    margin: 0 auto;
+    word-break: break-all;
+}
+
+.news_manage_container .tab-content .tab-pane table tbody td.index > div {
+    width: 40px;
+}
+
+.news_manage_container .tab-content .tab-pane table tbody td.title > div {
+    width: 120px;
+}
+
+.news_manage_container .tab-content .tab-pane table tbody td.img_url > div {
+    width: 250px;
+}
+
+.news_manage_container .tab-content .tab-pane table tbody td.content_url > div {
+    width: 300px;
+}
+
+.news_manage_container .tab-content .tab-pane table tbody .operate {
+    width: 120px;
+}
+
+.news_manage_container .tab-content .tab-pane table tbody .operate .btn:not(:first-child) {
+    margin-left: 8px;
+}
+
