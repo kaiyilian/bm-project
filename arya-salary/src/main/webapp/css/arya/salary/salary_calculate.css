@@ -1,0 +1,211 @@
+
+.container.salary_info_container {
+    width: 83.33333333%;
+    background-color: #F3F3F4;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.container.salary_info_container > .content {
+    padding: 0 15px;
+    height: 100%;
+    background-color: #fff;
+    overflow-y: auto;
+}
+
+.container.salary_info_container .content .corp_name {
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+.container.salary_info_container .content .upload_container .btn_list .btn_down {
+    margin: 0 5px 0 10px;
+    text-decoration: underline;
+    cursor: pointer;
+    float: right;
+    display: block;
+    line-height: 33px;
+}
+
+/* 提示信息 颜色*/
+
+.new_obj {
+    color: green;
+}
+
+.wrong_obj {
+    color: red;
+}
+
+.conflict_obj {
+    color: #F00078;
+}
+
+.sys_generate_obj {
+    color: blue;
+}
+
+/* 薪资计算 container */
+
+.salary_calc_container {
+    margin: 5px 0;
+    background-color: #fff;
+    float: left;
+    width: 100%;
+}
+
+.salary_calc_container .head {
+    line-height: 46px;
+    padding: 0 12px;
+}
+
+.salary_calc_container .head .title {
+    font-weight: bold;
+    float: left;
+    font-size: 14px;
+}
+
+.salary_calc_container .content {
+    float: left;
+    width: 100%;
+}
+
+.salary_calc_container .content .table_container {
+    overflow-x: auto;
+}
+
+.salary_calc_container .content .table_container table {
+    text-align: center;
+}
+
+.salary_calc_container .content .table_container table td.user_name div,
+.salary_calc_container .content .table_container table td.taxableSalary div,
+.salary_calc_container .content .table_container table td.personalTax div,
+.salary_calc_container .content .table_container table td.netSalary div,
+.salary_calc_container .content .table_container table td.brokerage div {
+    width: 80px;
+    padding: 0 10px;
+    margin: auto;
+}
+
+.salary_calc_container .content .table_container table td.user_idCard_no div {
+    width: 140px;
+    margin: auto;
+}
+
+.salary_calc_container .content .table_container table td.user_phone_no div {
+    width: 90px;
+    margin: auto;
+}
+
+.salary_calc_container .content .table_container table td.user_bank_account div {
+    width: 140px;
+    margin: auto;
+}
+
+.salary_calc_container .content .table_container table td.user_bank_address div {
+    width: 140px;
+    padding: 0 10px;
+    margin: auto;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    overflow: hidden; /* 超出部分不显示 */
+}
+
+.salary_calc_container .content .table_container table td.operate {
+    width: 80px;
+}
+
+.salary_calc_container .content .pager_container ul {
+    margin: 12px 8px 8px;
+}
+
+.salary_calc_container .foot {
+    padding: 0 8px;
+    float: left;
+    width: 100%;
+}
+
+.salary_calc_container .foot .btn_list .btn {
+    margin: 0;
+}
+
+/* 薪资统计 container */
+
+.salary_statistic_container {
+    margin: 5px 0;
+    background-color: #fff;
+    float: left;
+    width: 100%;
+}
+
+.salary_statistic_container .head {
+    line-height: 46px;
+    padding: 0 12px;
+}
+
+.salary_statistic_container .head .title {
+    font-weight: bold;
+    float: left;
+    font-size: 14px;
+}
+
+.salary_statistic_container .content {
+    float: left;
+    width: 100%;
+}
+
+.salary_statistic_container .content .table_container {
+    overflow-x: auto;
+}
+
+.salary_statistic_container .content .table_container table {
+    text-align: center;
+}
+
+.salary_statistic_container .content .pager_container ul {
+    margin: 12px 8px 8px;
+}
+
+.salary_statistic_container .foot {
+    padding: 0 8px;
+    float: left;
+    width: 100%;
+}
+
+.salary_statistic_container .foot .btn_list .btn {
+    margin: 0;
+}
+
+/* 薪资规则 container */
+
+.salary_rule_container {
+    margin: 5px 0;
+    background-color: #fff;
+    float: left;
+    width: 100%;
+}
+
+/* 操作反馈 弹框 */
+
+.operate_status_modal .table_container {
+    max-height: 500px;
+    overflow: auto;
+}
+
+.operate_status_modal .table_container table {
+    text-align: center;
+}
+
+.operate_status_modal .modal-body .row {
+    margin: 10px 0 0 0;
+    line-height: 25px;
+}
+
+.operate_status_modal .modal-body .row span {
+    font-size: 16px;
+    color: red;
+}

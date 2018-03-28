@@ -1,0 +1,10 @@
+.salary_operate_record_container #tb_record tbody tr td{
+    line-height:20px;
+}
+.salary_operate_record_container #tb_record tbody tr td .operate {
+    width: 120px;
+}
+
+.salary_operate_record_container #tb_record tbody tr td .operate .btn:not(:first-child) {
+    margin-left: 8px;
+}

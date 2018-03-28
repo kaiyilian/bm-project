@@ -1,0 +1,8 @@
+/* dataTables表头居中 */
+.dataTable>thead:first-child>tr:first-child>th{
+	text-align:center;
+}
+
+.dataTable>tbody>tr>td{
+	text-align:center;
+}

@@ -1,0 +1,10 @@
+
+.ledger_manage_container .content .table_container table td.bill_money,
+.ledger_manage_container .content .table_container table td.remark {
+    padding: 0 8px;
+    width: 100px;
+}
+
+.ledger_manage_container .content .table_container table td.operate {
+    width: 120px;
+}

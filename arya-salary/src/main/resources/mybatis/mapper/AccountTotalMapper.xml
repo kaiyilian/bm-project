@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bumu.arya.salary.dao.mybatis.CustomerAccountTotalMybatisDao">
+    <select id="findList" parameterType="com.bumu.arya.salary.command.CustomerAccountTotalQueryCommand"
+            resultType="com.bumu.arya.salary.result.CustomerAccountTotalQueryResult">
+        select
+          temp.customerId, sc.SHORT_NAME as customerName, sc.REMAIN_ACCOUNT as remainAccount,temp.transAccountAmountTotal,
+          (temp.salaryBeforeTaxTotal - IFNULL(deleteSalary.salaryBeforeTax,0)) as salaryBeforeTaxTotal,
+          (temp.salaryAfterTaxTotal - IFNULL(deleteSalary.salaryAfterTax,0)) as salaryAfterTaxTotal,
+          (temp.personalTaxFeeTotal - IFNULL(deleteSalary.personalTax, 0)) as personalTaxFeeTotal,
+          (temp.salaryFeeTotal - IFNULL(deleteSalary.salaryFee, 0)) as salaryFeeTotal
+        from (
+            select
+                sca.CUSTOMER_ID as customerId,
+                sum(sca.TRANS_ACCOUNT_AMOUNT) as transAccountAmountTotal,
+                sum(sca.SALARY_BEFORE_TAX) as salaryBeforeTaxTotal,
+                sum(sca.SALARY_AFTER_TAX) as salaryAfterTaxTotal,
+                sum(sca.PERSONAL_TAX_FEE) as personalTaxFeeTotal,
+                sum(sca.SALARY_FEE) as salaryFeeTotal
+            from
+                SALARY_CUSTOMER_ACCOUNT sca
+            <where>
+                and sca.IS_DELETE = 0
+                and sca.CREATE_TIME >=#{startTime}
+                <![CDATA[ and sca.CREATE_TIME <=#{endTime} ]]>
+            </where>
+            GROUP BY sca.CUSTOMER_ID
+        ) temp inner join SALARY_CUSTOMER sc on sc.id = temp.customerId
+        left join (
+          select
+            scd.CUSTOMER_ID as customerId,
+            sum(scd.TAXABLE_SALARY) as salaryBeforeTax,
+            sum(scd.PERSONAL_TAX) as personalTax,
+            sum(scd.NET_SALARY) as salaryAfterTax,
+            sum(scd.BROKERAGE) as salaryFee
+          from SALARY_CALCULATE sc
+            inner join SALARY_CALCULATE_DETAIL scd on sc.week = scd.week
+          where sc.IS_DEDUCT = 1  and scd.IS_DELETE = 1
+          and scd.IS_DEDUCT  = 1
+          and scd.UPDATE_TIME >=#{startTime}
+          <![CDATA[ and scd.UPDATE_TIME <=#{endTime} ]]>
+          group by scd.CUSTOMER_ID
+        ) deleteSalary on temp.customerId = deleteSalary.customerId
+    </select>
+</mapper>

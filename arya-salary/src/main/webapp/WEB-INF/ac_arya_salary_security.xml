@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--会话过滤器-->
+    <bean id="adminSessionSsoServletFilter" class="com.bumu.admin.filter.AdminSessionSsoServletFilter">
+        <property name="disabled" value="false"/>
+        <property name="loginPage" value="${arya.admin.sso.login.url}"/>
+        <property name="defaultReturnUrl" value="${arya.salary.default.page}"/>
+    </bean>
+
+    <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+        <property name="securityManager" ref="adminSecurityManager"/>
+        <property name="loginUrl" value="/unsafe/page"/>
+        <property name="unauthorizedUrl" value="/permission_fail"/>
+        <property name="filterChainDefinitions">
+            <value>
+                /salary/project/** = adminSessionSsoServletFilter, perms[salary:project:*]
+                /salary/customer/** = adminSessionSsoServletFilter, perms[salary:customer:*]
+                /salary/rule/** = adminSessionSsoServletFilter, perms[salary:rule:*]
+                /salary/account/recharge = adminSessionSsoServletFilter, perms[salary:recharge:*]
+                /salary/calculate/base/** = adminSessionSsoServletFilter, perms[salary:calculate:base:*]
+                /salary/calculate/delete = adminSessionSsoServletFilter, perms[salary:delete:base:*]
+                /salary/calculate/file/** = adminSessionSsoServletFilter, perms[salary:export:base:*]
+                /salary/calculate/deduct = adminSessionSsoServletFilter, perms[salary:deduct:base:*]
+                /salary/customerInfo/** = adminSessionSsoServletFilter, perms[customer:info:*]
+                /salary/bill/** = adminSessionSsoServletFilter, perms[salary:bill:*]
+                /** = adminSessionSsoServletFilter
+            </value>
+        </property>
+    </bean>
+
+</beans>

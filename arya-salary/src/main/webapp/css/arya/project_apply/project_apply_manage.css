@@ -1,0 +1,23 @@
+.contract_period_modal .modal-body .row {
+    margin-bottom: 15px;
+}
+
+.contract_period_modal .modal-body .row .laydate-icon {
+    position: absolute;
+    right: 15px;
+    top: 0;
+}
+
+.contract_period_modal .modal-body .row .contract_end_date_list {
+    margin-top: 15px;
+    line-height: 25px;
+}
+
+.contract_period_modal .modal-body .row .contract_end_date_list .item {
+    cursor: pointer;
+}
+
+.project_apply_manage_container .content .table_container table tbody .item .operate .btn {
+    margin-right: 10px;
+}
+

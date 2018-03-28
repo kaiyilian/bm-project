@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>版本信息</title>
+
+    <!--bootstrap样式-->
+    <link href="../../css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+        .table {
+            position: relative;
+            width: 96%;
+            margin: 20px auto;
+        }
+
+        table tbody td.version_no {
+            width: 100px;
+        }
+
+        table tbody td span {
+            display: block;
+            width: 100%;
+            line-height: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<table class="table table-striped table-bordered table-hover dataTable">
+    <thead>
+    <tr>
+        <td>版本号</td>
+        <td>更新内容</td>
+    </tr>
+    </thead>
+    <tbody>
+
+	<tr>
+		<td class="version_no">v2.5</td>
+		<td>
+			<span>
+				<ol>
+					<li>
+						薪资计算导入：新增普通计算规则，薪资计算结果中增加开户行列
+					</li>
+					<li>
+						客户管理：上传合同功能重构
+					</li>
+					<li>
+						新增台账汇总页面
+					</li>
+				</ol>
+			</span>
+		</td>
+	</tr>
+
+	<tr>
+		<td class="version_no">v2.4</td>
+		<td>
+			<span>
+				<ol>
+					<li>
+						客户列表：显示全部名称或增加简称，增加搜索功能，关键字，立项、计算、客户管理
+					</li>
+					<li>
+						新增立项确认后自动显示，新增立项确认后自动显示，
+					</li>
+					<li>
+						错误反馈增加日期和备注
+					</li>
+				</ol>
+			</span>
+		</td>
+	</tr>
+
+    <tr>
+        <td class="version_no">v2.3</td>
+        <td>
+			<span>
+				<ol>
+					<li>
+						新增“客户资料”模块：只有备注可编辑，其他数据从客户管理获取。可以下载所有客户资料。
+					</li>
+					<li>
+						新增“开票记录”模块：开票日期，邮寄日期，收件人，签收日期，签收情况，回款情况，备注
+						可进行编辑。其他信息从导出开票申请中获取
+					</li>
+				</ol>
+			</span>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="version_no">v2.2</td>
+        <td>
+			<span>
+				<ol>
+					<li>
+						薪资导入模块：按月导入功能取消，只能按批次导入。
+					</li>
+					<li>
+						客户管理模块：账户充值功能取消选择时间功能，默认当前日期。
+					</li>
+					<li>
+						台账管理模块：新增查询、下载功能。
+					</li>
+				</ol>
+			</span>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="version_no">v2.1</td>
+        <td>
+			<span>
+				<ol>
+					<li>
+						客户管理模块：新增“客户详情”页面，将原来客户管理页面的跟进记录功能
+						转到详情页面，同时取消客户管理页面中编辑用户信息的功能。
+					</li>
+				</ol>
+			</span>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="version_no">v2.0</td>
+        <td>
+			<span>
+				<ol>
+					<li>
+						增加立项申请模块。包含：新增公司、查看公司详情、转成正式客户。
+					</li>
+					<li>
+						增加薪资计算导入模块。根据公司的不同计算规则，导入用户薪资并计算。
+					</li>
+					<li>
+						增加客户管理模块。包含：正式用户的信息编辑、合同的上传和下载、账户充值、
+						薪资计算规则的设置。
+					</li>
+					<li>
+						增加薪资操作反馈记录模块。显示用户操作的记录列表，可导出。
+					</li>
+				</ol>
+			</span>
+        </td>
+    </tr>
+
+    </tbody>
+</table>
+
+</body>
+</html>

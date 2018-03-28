@@ -1,0 +1,25 @@
+.customer_info_container #tb_customer_info tbody tr td div {
+    margin: 0 auto;
+}
+
+.customer_info_container #tb_customer_info tbody tr td .operate {
+    width: 120px;
+}
+
+.customer_info_container #tb_customer_info tbody tr td .operate .btn:not(:first-child) {
+    margin-left: 8px;
+}
+
+.customer_info_container #tb_customer_info tbody tr td.sales_dept div,
+.customer_info_container #tb_customer_info tbody tr td.sales_man div,
+.customer_info_container #tb_customer_info tbody tr td.customer_name div {
+    width: 100px;
+}
+
+.customer_info_container #tb_customer_info tbody tr td.address div {
+    width: 120px;
+}
+
+.customer_info_container #tb_customer_info tbody tr td.remark div {
+    width: 300px;
+}

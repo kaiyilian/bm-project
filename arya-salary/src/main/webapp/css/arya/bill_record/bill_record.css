@@ -1,0 +1,19 @@
+.bill_info_modal .modal-body .row {
+    margin-bottom: 15px;
+}
+
+.bill_record_container #tb_bill_record tbody tr td .operate {
+    width: 120px;
+}
+
+.bill_record_container #tb_bill_record tbody tr td .operate .btn:not(:first-child) {
+    margin-left: 8px;
+}
+
+.bill_record_container #tb_bill_record tbody tr td.customer_header div {
+    width: 120px;
+}
+
+.bill_record_container #tb_bill_record tbody tr td.bill_company div {
+    width: 200px;
+}

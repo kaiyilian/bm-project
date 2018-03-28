@@ -1,0 +1,23 @@
+
+.layer-date {
+    max-width: inherit;
+    display: block !important;
+}
+
+.project_create_container .content .row {
+    line-height: 34px;
+    margin-top: 30px;
+}
+
+.project_create_container .content .row .col-xs-6 .col-xs-3 {
+    padding-right: 0;
+}
+
+.project_create_container .content .row .col-xs-6 textarea {
+    height: 100px;
+    resize: none;
+}
+
+.project_create_container .content .btn_save {
+    margin: 30px 15px 0;
+}
